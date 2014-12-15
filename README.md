@@ -52,3 +52,42 @@ You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
 
 Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
 
+
+
+### for windows
+
+ 1.安装Ruby
+ 
+ 下载RubyInstaller进行安装。链接：http://rubyinstaller.org/downloads/
+ 
+ 2.安装Ruby DevKit
+ 
+ 某些Gem会依赖native C，所以需要安装DevKit。
+ 
+ 根据Ruby版本选择相应的DevKit下载解压即可。链接：http://rubyinstaller.org/downloads/
+ 
+ 解压完成后，从命令行进入DevKit文件夹，运行一下命令
+ 
+    ```
+        ruby dk.rb init
+        
+        ruby dk.rb review
+        
+        ruby dk.rb install    
+    ```
+    
+ 3.run `gem install bundler`
+ 
+ 4.clone *your forked repository*  `git clone https://github.com/YOURUSERNAME/slate.git`
+ 
+ 5.`cd slate`
+ 
+ 6.Install all dependencies: `bundle install`
+ 
+ 7.Start the test server: `bundle exec middleman server`
+
+You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
+
+Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
+
+    
