@@ -52,9 +52,9 @@
 
 type:
 
-值           |       描述 
---------- | ----------- 
-FP.PRODUCT.TYPE |	产品类型
+值                  |       描述 
+---------           | ----------- 
+FP.PRODUCT.TYPE     |	产品类型
 FP.PRODUCT.TYPE.1	|	基金
 FP.PRODUCT.TYPE.2	|	票据 
 FP.PRODUCT.TYPE.3	|	P2P 
@@ -62,7 +62,7 @@ FP.PRODUCT.TYPE.4	|	银行资管
 
 category:
 
-值           |    描述 
+值          |    描述 
 ---------   | ----------- 
 ALL 	    |   显示所有基金
 OPEN 	    |   开放式基金（fundtype为2的基金，排除货币、短期理财、QDII、创新型）
@@ -128,9 +128,9 @@ CFP         |   集合理财(Collection Financial Product)
 
 type:
 
-值           |       描述 
---------- | ----------- 
-FP.PRODUCT.TYPE |	产品类型
+值                  |  描述 
+---------           | ----------- 
+FP.PRODUCT.TYPE     |	产品类型
 FP.PRODUCT.TYPE.1	|	基金
 FP.PRODUCT.TYPE.2	|	票据 
 FP.PRODUCT.TYPE.3	|	P2P 
@@ -182,9 +182,9 @@ FP.PRODUCT.TYPE.4	|	银行资管
 
 `chartType=1& prdCode=GYHB& interval=7`
 
-值           |       描述 
---------- | ----------- 
-chartType| 1(万份收益走势); 2(七日年化)
+值          |       描述 
+---------   | ----------- 
+chartType   | 1(万份收益走势); 2(七日年化)
 
 > The above command returns JSON structured like this:
 
@@ -213,20 +213,154 @@ chartType| 1(万份收益走势); 2(七日年化)
 }}
 ```
 
+##关注列表
 
+### URL 
 
+`POST /core/product/attentions`
+
+###参数
+
+`index=0&pageSize=10`
+
+###返回
+
+```json
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": {
+        "index": 0,
+        "pageSize": 10,
+        "pageNum": 0,
+        "count": 1,
+        "list": [
+            {
+                "id": null,
+                "name": "海富货A",
+                "type": "FP.PRODUCT.TYPE.1",
+                "typeDesc": "基金",
+                "code": "519505",
+                "category": "7",
+                "categoryDesc": null,
+                "group": "FP.RECOMMEND.TYPE.1",
+                "groupDesc": "推荐",
+                "tag": "FP.RECOMMEND.FLAG.2",
+                "tagDesc": "抢",
+                "peopleOfPurchased": 36894,
+                "sevenDaysIncome": "0.0476",
+                "millionIncome": "1.0695",
+                "purchasedMethod": "随买随卖",
+                "purchasedAmount": "100.0000",
+                "discount": "免手续费"
+            }
+        ]
+    }}
+```
+
+消息编码    |   错误描述
+---------  | ----------- 
+0000	   |   操作成功
+2401	   |   类型不能为空
+2402	   |   产品详情查询失败
+2403	   |   种类不能为空
+
+## 产品关注
+
+### URL
+
+`POST /core/product/attention/create`
+
+### 参数
+
+`code=519505`
+
+### 返回
+
+```json
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": null}
+```
+
+## 批量关注
+
+### URL
+
+`POST /core/product/attentions/create`
+
+### 参数
+
+`Form格式:codes[2]=161608 codes[1]=202301,codes[0]=519505`
+
+### 返回
+
+```json
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": null}
+```
+
+## 取消关注
+
+### URL
+
+`POST /core/product/attention/cancel`
+
+### 参数
+
+`code=519505`
+
+### 返回
+
+```json
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": null}
+```
 
 
 ## 协议
 
-POST        /product/detail                   
-POST        /product/chart                   
-POST        /product/index                    
-POST        /products                         
-POST        /product/attentions            
-POST        /product/attention/create        
-POST        /product/attentions/create       
-POST        /product/attention/cancel
+### URL
+
+`POST /core/agreement/findlinkbycode`
+
+### 参数
+
+`code=0001`
+
+### 返回
+
+```json
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": {
+        "title": "用户协议",
+        "link": "http://192.168.1.97:8888/www/userinstructions.html",
+        "updatedAt": "2014-09-27 12:04:58",
+        "code": "0001"
+    }}
+```
 
 ## 银行活期利率
 
