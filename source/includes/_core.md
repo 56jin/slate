@@ -2,48 +2,47 @@
 
 ## 产品首页
 
-### URL
+### HTTP 请求
 
 `POST   /core/product/index`
 
-### 返回
-
+> The above command returns JSON structured like this:
 ```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": [
-        {
-            "id": null,
-            "name": "海富货A",
-            "type": "FP.PRODUCT.TYPE.1",
-            "typeDesc": "基金",
-            "code": "519505",
-            "category": "MONETARY",
-            "categoryDesc": null,
-            "group": "FP.RECOMMEND.TYPE.1",
-            "groupDesc": "首页",
-            "tag": "FP.RECOMMEND.FLAG.1",
-            "tagDesc": "荐",
-            "peopleOfPurchased": 36894,
-            "sevenDaysIncome": "0.0393",
-            "millionIncome": "1.0387",
-            "purchasedMethod": "随买随卖",
-            "purchasedAmount": "100",
-            "discount": "免手续费",
-            "activity": "",
-            "purchaseState": 1
-        }
-    ]}
+{"message": {
+    "severity": 0,
+    "code": "0000",
+    "summary": "操作成功",
+    "detail": "",
+    "fields": {}
+}, "value": [
+    {
+        "id": null,
+        "name": "海富货A",
+        "type": "FP.PRODUCT.TYPE.1",
+        "typeDesc": "基金",
+        "code": "519505",
+        "category": "MONETARY",
+        "categoryDesc": null,
+        "group": "FP.RECOMMEND.TYPE.1",
+        "groupDesc": "首页",
+        "tag": "FP.RECOMMEND.FLAG.1",
+        "tagDesc": "荐",
+        "peopleOfPurchased": 36894,
+        "sevenDaysIncome": "0.0393",
+        "millionIncome": "1.0387",
+        "purchasedMethod": "随买随卖",
+        "purchasedAmount": "100",
+        "discount": "免手续费",
+        "activity": "",
+        "purchaseState": 1
+    }
+]}
 ```
 
     
 ## 产品列表
 
-### URL
+### HTTP 请求
 
 `POST   /core/products`
     
@@ -78,43 +77,43 @@ MONETARY    |	货币型(不含短期理财)
 STF         |   短期理财(不含集合理财)(Short Term Financial Product)
 CFP         |   集合理财(Collection Financial Product)
 
-### 返回
+> The above command returns JSON structured like this:
 
 ```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": {
-        "index": 0,
-        "pageSize": 10,
-        "pageNum": 0,
-        "count": 1,
-        "list": [
-            {
-                "id": null,
-                "name": "大成21债A",
-                "type": "FP.PRODUCT.TYPE.1",
-                "typeDesc": "基金",
-                "code": "090023",
-                "category": "2",
-                "categoryDesc": null,
-                "group": "FP.RECOMMEND.TYPE.1",
-                "groupDesc": "推荐",
-                "tag": "FP.RECOMMEND.FLAG.2",
-                "tagDesc": "抢",
-                "peopleOfPurchased": 111,
-                "sevenDaysIncome": "0.0354",
-                "millionIncome": "0.9732",
-                "purchasedMethod": "7天",
-                "purchasedAmount": "1000",
-                "discount": "免手续费",
-                "activity": ""
-            }
-        ]
-    }}
+{"message": {
+    "severity": 0,
+    "code": "0000",
+    "summary": "操作成功",
+    "detail": "",
+    "fields": {}
+}, "value": {
+    "index": 0,
+    "pageSize": 10,
+    "pageNum": 0,
+    "count": 1,
+    "list": [
+        {
+            "id": null,
+            "name": "大成21债A",
+            "type": "FP.PRODUCT.TYPE.1",
+            "typeDesc": "基金",
+            "code": "090023",
+            "category": "2",
+            "categoryDesc": null,
+            "group": "FP.RECOMMEND.TYPE.1",
+            "groupDesc": "推荐",
+            "tag": "FP.RECOMMEND.FLAG.2",
+            "tagDesc": "抢",
+            "peopleOfPurchased": 111,
+            "sevenDaysIncome": "0.0354",
+            "millionIncome": "0.9732",
+            "purchasedMethod": "7天",
+            "purchasedAmount": "1000",
+            "discount": "免手续费",
+            "activity": ""
+        }
+    ]
+}}
 ```
 
 ## 产品详情
@@ -137,7 +136,7 @@ FP.PRODUCT.TYPE.2	|	票据
 FP.PRODUCT.TYPE.3	|	P2P 
 FP.PRODUCT.TYPE.4	|	银行资管  
 
-### 返回
+> The above command returns JSON structured like this:
 
 ```json
 {"message": {
@@ -187,31 +186,31 @@ FP.PRODUCT.TYPE.4	|	银行资管
 --------- | ----------- 
 chartType| 1(万份收益走势); 2(七日年化)
 
-### 返回
+> The above command returns JSON structured like this:
 
 ```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": {
-        "prdName": "易方达天天B",
-        "prdCode": "000010",
-        "chartType": "1",
-        "chartName": "万份收益走势",
-        "points": [
-            {
-                "date": "2014-11-20",
-                "value": "1.41440"
-            },
-            {
-                "date": "2014-11-20",
-                "value": "1.41440"
-            }
-        ]
-    }}
+{"message": {
+    "severity": 0,
+    "code": "0000",
+    "summary": "操作成功",
+    "detail": "",
+    "fields": {}
+}, "value": {
+    "prdName": "易方达天天B",
+    "prdCode": "000010",
+    "chartType": "1",
+    "chartName": "万份收益走势",
+    "points": [
+        {
+            "date": "2014-11-20",
+            "value": "1.41440"
+        },
+        {
+            "date": "2014-11-20",
+            "value": "1.41440"
+        }
+    ]
+}}
 ```
 
 
@@ -235,16 +234,16 @@ POST        /product/attention/cancel
 
 `POST /core/deposit/interest/current`
 
-### 返回
+> The above command returns JSON structured like this:
 
 ```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": 0.0035}
+{"message": {
+    "severity": 0,
+    "code": "0000",
+    "summary": "操作成功",
+    "detail": "",
+    "fields": {}
+}, "value": 0.0035}
 ```
 
     
