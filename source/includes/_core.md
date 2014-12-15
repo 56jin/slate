@@ -214,17 +214,17 @@ chartType   | 1(万份收益走势); 2(七日年化)
 }}
 ```
 
-##关注列表
+## 关注列表
 
 ### URL 
 
 `POST /core/product/attentions`
 
-###参数
+### 参数
 
 `index=0&pageSize=10`
 
-###返回
+### 返回
 
 > The above command returns JSON structured like this:
 
