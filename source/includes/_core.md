@@ -7,6 +7,7 @@
 `POST   /core/product/index`
 
 > The above command returns JSON structured like this:
+
 ```json
 {"message": {
     "severity": 0,
@@ -225,6 +226,8 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ###返回
 
+> The above command returns JSON structured like this:
+
 ```json
     {"message": {
         "severity": 0,
@@ -280,6 +283,8 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ### 返回
 
+> The above command returns JSON structured like this:
+
 ```json
     {"message": {
         "severity": 0,
@@ -301,6 +306,8 @@ chartType   | 1(万份收益走势); 2(七日年化)
 `Form格式:codes[2]=161608 codes[1]=202301,codes[0]=519505`
 
 ### 返回
+
+> The above command returns JSON structured like this:
 
 ```json
     {"message": {
@@ -324,6 +331,8 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ### 返回
 
+> The above command returns JSON structured like this:
+
 ```json
     {"message": {
         "severity": 0,
@@ -333,7 +342,6 @@ chartType   | 1(万份收益走势); 2(七日年化)
         "fields": {}
     }, "value": null}
 ```
-
 
 ## 协议
 
@@ -346,6 +354,8 @@ chartType   | 1(万份收益走势); 2(七日年化)
 `code=0001`
 
 ### 返回
+
+> The above command returns JSON structured like this:
 
 ```json
     {"message": {
@@ -371,13 +381,13 @@ chartType   | 1(万份收益走势); 2(七日年化)
 > The above command returns JSON structured like this:
 
 ```json
-{"message": {
-    "severity": 0,
-    "code": "0000",
-    "summary": "操作成功",
-    "detail": "",
-    "fields": {}
-}, "value": 0.0035}
+    {"message": {
+        "severity": 0,
+        "code": "0000",
+        "summary": "操作成功",
+        "detail": "",
+        "fields": {}
+    }, "value": 0.0035}
 ```
 
     
