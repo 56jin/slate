@@ -1,8 +1,8 @@
 # Core 模块
 
-## 产品首页
+## Product Index
 
-### HTTP 请求
+### URL
 
 `POST   /core/product/index`
 
@@ -39,15 +39,14 @@
     }
 ]}
 ```
-
     
-## 产品列表
+## Product List
 
-### HTTP 请求
+### URL
 
 `POST   /core/products`
     
-### 参数
+### Parameters
 
 `Form格式： index=0&pageSize=10&category= STF&type=FP.PRODUCT.TYPE.1`
 
@@ -117,13 +116,13 @@ CFP         |   集合理财(Collection Financial Product)
 }}
 ```
 
-## 产品详情
+## Product Detail
 
 ### URL
 
 `POST        /core/product/detail`
 
-### 参数
+### Parameters
 
 `Form格式：type=FP.PRODUCT.TYPE.1&code=000009`
 
@@ -173,13 +172,13 @@ FP.PRODUCT.TYPE.4	|	银行资管
 }
 ```
 
-## 图表
+## Product Chart
 
 ### URL
 
 `POST /core/product/chart`
 
-### 参数
+### Parameters
 
 `chartType=1& prdCode=GYHB& interval=7`
 
@@ -214,17 +213,15 @@ chartType   | 1(万份收益走势); 2(七日年化)
 }}
 ```
 
-## 关注列表
+## Attention List
 
 ### URL 
 
 `POST /core/product/attentions`
 
-### 参数
+### Parameters
 
 `index=0&pageSize=10`
-
-### 返回
 
 > The above command returns JSON structured like this:
 
@@ -271,17 +268,15 @@ chartType   | 1(万份收益走势); 2(七日年化)
 2402	   |   产品详情查询失败
 2403	   |   种类不能为空
 
-## 产品关注
+## Attention Product 
 
 ### URL
 
 `POST /core/product/attention/create`
 
-### 参数
+### Parameters
 
 `code=519505`
-
-### 返回
 
 > The above command returns JSON structured like this:
 
@@ -295,17 +290,15 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## 批量关注
+## Attention Products
 
 ### URL
 
 `POST /core/product/attentions/create`
 
-### 参数
+### Parameters
 
 `Form格式:codes[2]=161608 codes[1]=202301,codes[0]=519505`
-
-### 返回
 
 > The above command returns JSON structured like this:
 
@@ -319,17 +312,15 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## 取消关注
+## Cancel Attention
 
 ### URL
 
 `POST /core/product/attention/cancel`
 
-### 参数
+### Parameters
 
 `code=519505`
-
-### 返回
 
 > The above command returns JSON structured like this:
 
@@ -343,17 +334,15 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## 协议
+## Agreement
 
 ### URL
 
 `POST /core/agreement/findlinkbycode`
 
-### 参数
+### Parameters
 
 `code=0001`
-
-### 返回
 
 > The above command returns JSON structured like this:
 
@@ -372,7 +361,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }}
 ```
 
-## 银行活期利率
+## Deposit Interest Rate
 
 ### URL
 
