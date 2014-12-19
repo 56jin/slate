@@ -23,4 +23,10 @@ search: true
 具体的写法请参考demo.md文件。
 
 
+## server
+
+`\\VENNS\Users\Public\Documents\Servers.xlsx`
+
+
+
 
