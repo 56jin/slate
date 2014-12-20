@@ -22,10 +22,26 @@ search: true
 请大家把自己负责模块的API文档写到includes目录下对应的makedown文件里面。
 具体的写法请参考demo.md文件。
 
+## hosts
+
+### windows
+
+在`C:\Windows\System32\drivers\etc\hosts`添加下面服务器的信息
+
+### mac
+
+在`\etc\hosts`添加下面服务器的信息
+
+```
+192.168.1.97   SATURN
+192.168.1.96   EARTH
+192.168.1.95   MARS
+192.168.1.94   VENNS
+```
 
 ## server
 
-`\\VENNS\Users\Public\Documents\Servers.xlsx`
+
 
 
 主机名	        | 描述	        | RAM	 | ROM	 | IP	            | 用户名	    | 密码	      | 服务
