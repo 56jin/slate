@@ -386,4 +386,147 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": 0.0035}
 ```
 
-    
+
+## gen Verification Code
+
+### URL
+`POST /core/verificationcode`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&type=REGISTER&deviceNo=123`
+type:
+
+值                  |  描述
+---------           | -----------
+REGISTER            |	注册
+RESETPWD	        |	忘记密码
+RESETACCOUNT	    |	重置交易密码
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "操作成功",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
+
+
+## register
+
+### URL
+`POST /core/register`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&verifyCode=1234&deviceNo=123&recommendPhone=15821948594`
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0100",
+            "summary": "注册成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",//0关闭、1开启
+            "certify": "0",//0 未实名 1实名
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",//0未1已
+            "gestureSetted": "0",//首次设置手势密码0是1否
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+
+消息编码    |   错误描述
+---------  | -----------
+0100	   |   注册成功
+2001	   |   访问失败	参数为空
+2101	   |   该手机号已注册
+2103	   |   验证码不正确	请重新输入
+2104	   |   验证码失效	请重新获取
+2105	   |   未获取验证码	请获取验证码
+
+
+
+## certify
+
+### URL
+`POST /core/certify`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&userName=name&idCardNo=111121212121234&deviceNo=123`
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0201",
+            "summary": "认证成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+消息编码    |   错误描述
+---------  | -----------
+0201	   |   认证成功
+2001	   |   访问失败	参数为空
+2002	   |   登录超时	请重新登录
+2201	   |   认证失败 	不一致/库中无此号
+3200	   |   实名认证失败
