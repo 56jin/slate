@@ -394,6 +394,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&type=REGISTER&deviceNo=123`
+
 type:
 
 值                  |  描述

@@ -15,6 +15,7 @@
           dateTime;
           bankName;
           bankAcco;`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -44,6 +45,7 @@
           applySum;
           bankCardInfo;
           dateTime;`
+
  请求带token
 
 > The above command returns JSON structured like this:

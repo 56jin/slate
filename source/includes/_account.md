@@ -16,6 +16,7 @@
           shumi_bankSerial;
           shumi_phoneNum;
           shumi_email;`
+
  请求带token
 
 > The above command returns JSON structured like this:

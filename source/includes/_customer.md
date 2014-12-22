@@ -438,6 +438,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -496,6 +497,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&gesturePassWord=encrypt(MD5)&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -555,6 +557,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&userName=name&idCardNo=4444444441211&verifyCode=1234&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -591,6 +594,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -639,6 +643,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -664,6 +669,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&gesturePassWord=encrypt(MD5)&gestureOpened=0&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -713,6 +719,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
@@ -740,6 +747,7 @@ type:
 
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&deviceNo=123`
+
  请求带token
 
 > The above command returns JSON structured like this:
