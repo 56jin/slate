@@ -74,7 +74,7 @@ pgDB-Slave	    |i-23q0fd3m2	|4G      |100G	 |10.251.236.185	|root	    |iWantaD0g
 PG-Master-slave |               |	     |       |                  |           |             |/venns/user/public/document/pgPool-config.txt  				
 Master		    |	            |        |       |192.168.1.110	    |vagrant	|vagrant	  |
 Slave		    |	            |        |       |192.168.1.211	    |vagrant	|vagrant	  |
-Archive		    |	            |        |       |192.168.1.112			
+Archive, JIRA   |	            |        |       |192.168.1.87		|vagrant    |vagrant	  | 	
 
 
 
