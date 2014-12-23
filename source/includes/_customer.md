@@ -833,10 +833,10 @@ FP.SEND.TYPE.3  |	个人推送
 
 readInd:
 
-值 |    描述
--- | -----------
-N  |	未读
-Y  |	已读
+值     |    描述
+------ | -----------
+N      |	未读
+Y      |	已读
 
 > The above command returns JSON structured like this:
 
