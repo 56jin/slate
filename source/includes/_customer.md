@@ -812,3 +812,133 @@ type:
 ```
 
 
+## Search Message List
+
+### URL
+`POST /customer/message/list`
+
+### Parameters
+`Form格式：index=3&pageSize=5`
+
+request带token 查询登录后的  未带查询登录前的
+
+
+sendType:
+
+值              |       描述
+--------------  | -----------
+FP.SEND.TYPE.1  |	短信发送
+FP.SEND.TYPE.2  |	群发推送
+FP.SEND.TYPE.3  |	个人推送
+
+readInd:
+
+值 |    描述
+-- | -----------
+N  |	未读
+Y  |	已读
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+       {
+           "message": {
+               "severity": 0,
+               "code": "0000",
+               "summary": "操作成功",
+               "detail": "",
+               "fields": { }
+           },
+           "value": {
+               "index": 3,
+               "pageSize": 5,
+               "pageNum": 0,
+               "count": 7,
+               "list": [
+                   {
+                       "msgId": 216627,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216626,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216625,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216624,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:39",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216623,
+                       "messageRuleId": 5,
+                       "title": "首次购买成功",
+                       "summary": "尊敬的用户，恭喜您完成了首次购买，【金豆荚】赠送您20元红包...",
+                       "createTime": "2014-12-23 08:34",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   }
+               ],
+               "filter": { }
+           }
+       }
+    }
+```
+
+
+
+
+
+## Search Message detail
+
+### URL
+`POST /customer/message/detail`
+
+### Parameters
+`Form格式：msgId=216623&sendType=FP.SEND.TYPE.3`
+
+request带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+       {
+           "message": {
+               "severity": 0,
+               "code": "0000",
+               "summary": "操作成功",
+               "detail": "",
+               "fields": { }
+           },
+           "value": {
+               "title": "红包取现",
+               "content": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1个工作日内将现金打到您的银行卡里，请耐性等待。若逾期未到账请及时联系【金豆荚】的官方客服400-728-0153。【金豆荚】祝您理财愉快！",
+               "createTime": "2014-12-23 08:40"
+           }
+       }
+    }
+```
