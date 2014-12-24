@@ -570,24 +570,27 @@ RESETACCOUNT	    |	重置交易密码
 
 ### Parameters
 `Form格式：
-    No;
-    TradeAccount;
-    SubTradeAccount;
-    IsVaild;
-    Balance;
-    Status;
-    StatusToCN;
-    IsFreeze;
-    BankSerial;
-    BankName;
-    CapitalMode;
-    BindWay;
-    SupportAutoPay;
-    DiscountRate;
-    LimitDescribe;
-    ContentDescribe;
-    Priority;
-    IsP2p;
+    cards=[
+           {
+           "No": "912739172312333333", -->银行卡号
+           "TradeAccount": "0299", -->基金交易账号
+           "SubTradeAccount": "0299;", -->
+           "IsVaild": true, -->卡是否已经通过验证
+           "Balance": 0.0, -->每日额度限制，如果为0则说明没有限制
+           "Status": "0", -->卡的状态
+           "StatusToCN": "正常", -->卡状态对应的说明
+           "IsFreeze": false, -->是否被冻结
+           "BankSerial": "005", -->银行编号
+           "BankName": "建设银行", -->银行名称
+           "CapitalMode": "6", -->绑卡渠道
+           "BindWay": "0", -->绑卡方式
+           "SupportAutoPay": true, -->
+           "DiscountRate": 0.40, -->购买时折扣
+           "LimitDescribe": "单笔50万元，日累计50万元", -->限制描述
+           "ContentDescribe": "必须开通网上银行(U盾或动态口令)" -->
+           },
+           ...
+           ]
 `
 
 > The above command returns JSON structured like this:
