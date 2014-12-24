@@ -531,3 +531,77 @@ RESETACCOUNT	    |	重置交易密码
 2002	   |   登录超时	请重新登录
 2201	   |   认证失败 	不一致/库中无此号
 3200	   |   实名认证失败
+
+
+
+
+
+
+## bankCard create
+
+### URL
+`POST /core/bank/bankcard/create`
+
+### Parameters
+`Form格式：bankName=name&bankCard=111121212121234&bankSerial=123`
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0210",
+            "summary": "操作成功",
+            "detail": "银行卡添加成功",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
+
+
+
+## bankCard saveAll
+
+### URL
+`POST /core/bank/bankcard/saveall`
+
+### Parameters
+`Form格式：
+    No;
+    TradeAccount;
+    SubTradeAccount;
+    IsVaild;
+    Balance;
+    Status;
+    StatusToCN;
+    IsFreeze;
+    BankSerial;
+    BankName;
+    CapitalMode;
+    BindWay;
+    SupportAutoPay;
+    DiscountRate;
+    LimitDescribe;
+    ContentDescribe;
+    Priority;
+    IsP2p;
+`
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
