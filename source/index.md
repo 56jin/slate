@@ -71,12 +71,16 @@ finplat-1	    |finplat-1	    |4G	     |100G	 |10.168.208.241(内)	|root	    |6mO
 pgDB-1	        |4G	            |100G	 |       |10.168.211.45(内)	|root	    |6mOu9cIb	  |jdbc:postgresql://localhost:5432/sunlights   sunlights/sunlights
 				|               |        |	     |          	    |admin	    |zse4rfvgy7	  |
 pgDB-Slave	    |i-23q0fd3m2	|4G      |100G	 |10.251.236.185	|root	    |iWantaD0g	  |
-PG-Master-slave |               |	     |       |                  |           |             |/venns/user/public/document/pgPool-config.txt  				
+PG-Master-slave |               |	     |       |                  |           |             |/venns/user/public/document/pgPool-config.txt
 Master		    |	            |        |       |192.168.1.110	    |vagrant	|vagrant	  |
 Slave		    |	            |        |       |192.168.1.211	    |vagrant	|vagrant	  |
 Archive, JIRA   |	            |        |       |192.168.1.87		|vagrant    |vagrant	  | 	
 
 
 
+## API service 
 
+* 测试环境的base URL： http://192.168.1.97/api/
+* 开发环境的base URL： http://192.168.1.97:9005/api/
+* 生成环境的base URL： http://121.40.204.123/api/
 

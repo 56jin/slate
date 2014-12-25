@@ -6,6 +6,9 @@
 
 `POST   /core/product/index`
 
+获取放在首页的产品
+
+
 > The above command returns JSON structured like this:
 
 ```json
@@ -45,6 +48,8 @@
 ### URL
 
 `POST   /core/products`
+
+获取产品列表 
     
 ### Parameters
 
