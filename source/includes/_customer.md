@@ -429,3 +429,516 @@ type:
 
 }}
 ```
+
+
+## login
+
+### URL
+`POST /customer/login`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0101",
+            "summary": "登录成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+消息编码    |   错误描述
+---------  | -----------
+0101	   |   登录成功
+2001	   |   访问失败	参数为空
+2002	   |   登录超时	请重新登录
+2100	   |   该手机号未注册
+2106	   |   密码错误次数过多	约xx分后再试
+2107	   |   密码错误	剩余次数xx
+
+
+
+## login by ges
+
+### URL
+`POST /customer/loginbyges`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&gesturePassWord=encrypt(MD5)&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0101",
+            "summary": "登录成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+消息编码    |   错误描述
+---------  | -----------
+0101	   |   登录成功
+2001	   |   访问失败	参数为空
+2002	   |   登录超时	请重新登录
+2100	   |   该手机号未注册
+2111	   |   未设置手势	请先开启手势
+2109	   |   手势登录失败超过最大次数	请换密码登录
+2108	   |   手势密码错误	剩余次数xx
+
+
+
+## reset pwd certify
+
+### URL
+`POST /customer/resetpwdcertify`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&userName=name&idCardNo=4444444441211&verifyCode=1234&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "操作成功",
+            "fileds": { }
+        }
+    }
+```
+
+消息编码    |   错误描述
+---------  | -----------
+0000	   |   操作成功
+2002	   |   登录超时	请重新登录
+2001	   |   访问失败	参数为空
+2103	   |   验证码不正确	请重新输入
+2104	   |   验证码失效	请重新获取
+2105	   |   未获取验证码	请获取验证码
+2200	   |   真实姓名或身份证号错误
+
+
+
+## reset pwd
+
+### URL
+`POST /customer/resetpwd`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0101",
+            "summary": "登录成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+
+
+## confirm pwd
+
+### URL
+`POST /customer/confirmpwd`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "操作成功",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
+
+
+## save ges pwd
+
+### URL
+`POST /customer/savegespwd`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&gesturePassWord=encrypt(MD5)&gestureOpened=0&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0101",
+            "summary": "登录成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+
+
+
+## logout
+
+### URL
+`POST /customer/logout`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0104",
+            "summary": "登出成功",
+            "detail": "",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
+
+
+
+
+## get usermstr
+
+### URL
+`POST /customer/getusermstr`
+
+### Parameters
+`Form格式：mobilePhoneNo=13811599308&deviceNo=123`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": {
+            "userName": null,
+            "nickName": null,
+            "mobilePhoneNo": "15821948586",
+            "mobileDisplayNo": "158****8586",
+            "email": null,
+            "gestureOpened": "0",
+            "certify": "0",
+            "idCardNo": null,
+            "bankCardCount": "0",
+            "tradePwdFlag": "0",
+            "gestureSetted": "0",
+            "shumi_tokenKey": null,
+            "shumi_tokenSecret": null,
+            "shumi_userName": null,
+            "shumi_realName": null,
+            "shumi_idNumber": null,
+            "shumi_bankName": null,
+            "shumi_bankCardNo": null,
+            "shumi_bankSerial": null,
+            "shumi_phoneNum": null,
+            "shumi_email": null
+        }
+    }
+```
+
+
+## add feedback
+
+### URL
+`POST /customer/addfeedback`
+
+### Parameters
+`Form格式：mobile=13811599308&deviceNo=123&feedback=这是内容`
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0000",
+            "summary": "操作成功",
+            "detail": "操作成功",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
+
+
+## Search Message List
+
+### URL
+`POST /customer/message/list`
+
+### Parameters
+`Form格式：index=3&pageSize=5`
+
+request带token 查询登录后的  未带查询登录前的
+
+
+sendType:
+
+值              |       描述
+--------------  | -----------
+FP.SEND.TYPE.1  |	短信发送
+FP.SEND.TYPE.2  |	群发推送
+FP.SEND.TYPE.3  |	个人推送
+
+readInd:
+
+值     |    描述
+------ | -----------
+N      |	未读
+Y      |	已读
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+       {
+           "message": {
+               "severity": 0,
+               "code": "0000",
+               "summary": "操作成功",
+               "detail": "",
+               "fields": { }
+           },
+           "value": {
+               "index": 3,
+               "pageSize": 5,
+               "pageNum": 0,
+               "count": 7,
+               "list": [
+                   {
+                       "msgId": 216627,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216626,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216625,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:40",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216624,
+                       "messageRuleId": 6,
+                       "title": "红包取现",
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
+                       "createTime": "2014-12-23 08:39",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   },
+                   {
+                       "msgId": 216623,
+                       "messageRuleId": 5,
+                       "title": "首次购买成功",
+                       "summary": "尊敬的用户，恭喜您完成了首次购买，【金豆荚】赠送您20元红包...",
+                       "createTime": "2014-12-23 08:34",
+                       "sendType": "FP.SEND.TYPE.3",
+                       "readInd": "N"
+                   }
+               ],
+               "filter": { }
+           }
+       }
+    }
+```
+
+
+
+
+
+## Search Message detail
+
+### URL
+`POST /customer/message/detail`
+
+### Parameters
+`Form格式：msgId=216623&sendType=FP.SEND.TYPE.3`
+
+request带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+       {
+           "message": {
+               "severity": 0,
+               "code": "0000",
+               "summary": "操作成功",
+               "detail": "",
+               "fields": { }
+           },
+           "value": {
+               "title": "红包取现",
+               "content": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1个工作日内将现金打到您的银行卡里，请耐性等待。若逾期未到账请及时联系【金豆荚】的官方客服400-728-0153。【金豆荚】祝您理财愉快！",
+               "createTime": "2014-12-23 08:40"
+           }
+       }
+    }
+```
