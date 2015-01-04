@@ -396,7 +396,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ### URL
 `POST /core/verificationcode`
-
+(调用第二办公室短信发送接口，需通知对方绑定接口请求服务器IP地址)
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&type=REGISTER&deviceNo=123`
 
