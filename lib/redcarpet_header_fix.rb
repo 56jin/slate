@@ -6,4 +6,4 @@ module RedcarpetHeaderFix
 end
 
 require 'middleman-core/renderers/redcarpet'
-Middleman::Renderers::MiddlemanRedcarpetHTML.send :include, RedcarpetHeaderFix
+#Middleman::Renderers::MiddlemanRedcarpetHTML.send :include, RedcarpetHeaderFix
