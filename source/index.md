@@ -13,6 +13,7 @@ includes:
   - customer
   - trade
   - errors
+  - angularjs_style_guide
 
 search: true
 ---
