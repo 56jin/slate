@@ -7,6 +7,7 @@ language_tabs:
   - javascript
 
 includes:
+  - jdj_online
   - common
   - core
   - account
