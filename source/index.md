@@ -74,8 +74,8 @@ pgDB-1	        |4G	            |100G	 |       |10.168.211.45(内)	|root	    |6mO
 				|               |        |	     |          	    |admin	    |zse4rfvgy7	  |
 pgDB-Slave	    |i-23q0fd3m2	|4G      |100G	 |10.251.236.185	|root	    |iWantaD0g	  |
 PG-Master-slave |               |	     |       |                  |           |             |/venns/user/public/document/pgPool-config.txt
-Master		    |	            |        |       |192.168.0.110	    |vagrant	|vagrant	  |
-Slave		    |	            |        |       |192.168.0.211	    |vagrant	|vagrant	  |
+Master		    |	            |        |       |192.168.0.85	    |vagrant	|vagrant	  |
+Slave		    |	            |        |       |192.168.0.86      |vagrant	|vagrant	  |
 Archive, JIRA   |	            |        |       |192.168.0.87		|vagrant    |vagrant	  | 	
 
 
