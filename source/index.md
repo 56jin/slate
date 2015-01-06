@@ -25,6 +25,8 @@ search: true
 具体的写法请参考demo.md文件。
 ## hosts
 
+[Git 简单使用指南](http://www.bootcss.com/p/git-guide/)
+
 ### windows
 
 在`C:\Windows\System32\drivers\etc\hosts`添加下面服务器的信息
