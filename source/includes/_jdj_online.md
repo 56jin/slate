@@ -12,23 +12,21 @@
 	* https配置：
 	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
 	ii.新建 /etc/nging/conf.d/ssl.conf 文件:
-#Nginx https server
 
-```
 server {
-    listen       443 ssl;
-    server_name  localhost;
-    charset utf-8;
-    access_log /var/log/nginx/ssl.access.log main;
+      listen 443 ssl;
+      server_name localhost;
+      charset utf-8;
+      access_log /var/log/nginx/ssl.access.log main;
 
-       ssl  on;
-       ssl_certificate  cert/sunlights.crt;
-       ssl_certificate_key  cert/sunlights.key;
-       ssl_session_cache  shared:SSL:10m;
-       ssl_session_timeout  15m;
-       ssl_protocols SSLv2 TLSv1 TLSv1.1 TLSv1.2;
-       ssl_ciphers  HIGH:!aNULL:!MD5;
-       ssl_prefer_server_ciphers  on;
+      ssl  on;
+      ssl_certificate  cert/sunlights.crt;
+      ssl_certificate_key  cert/sunlights.key;
+      ssl_session_cache  shared:SSL:10m;
+      ssl_session_timeout  15m;
+      ssl_protocols SSLv2 TLSv1 TLSv1.1 TLSv1.2;
+      ssl_ciphers  HIGH:!aNULL:!MD5;
+      ssl_prefer_server_ciphers  on;
 
     location / {
            root   /data;
@@ -73,7 +71,6 @@ server {
             reset_timedout_connection on;
        }
    }
-```
 
 
 	* 负载均衡配置
