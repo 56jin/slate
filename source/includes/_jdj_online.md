@@ -11,10 +11,13 @@
 1. nginx的配置 （吴杭军请你补充这个模块的内容）
 	* https配置：
 1.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
+
 2.新建 /etc/nging/conf.d/ssl.conf 文件:
 
-# HTTPS server
+#Nginx https server
+
 server {
+
     listen       443 ssl;
     server_name  localhost;
     charset utf-8;
@@ -30,11 +33,13 @@ server {
        ssl_prefer_server_ciphers  on;
 
     location / {
+
            root   /data;
            index  index.html index.htm;
        }
 
     location /api/ {
+
             proxy_pass http://192.168.0.97:9001/;
             proxy_http_version 1.1;
             proxy_set_header Connection "";
@@ -54,6 +59,7 @@ server {
        }
 
     location /api_dev/ {
+
             proxy_pass http://192.168.0.95:9005/;
             proxy_http_version 1.1;
             proxy_set_header Connection "";
