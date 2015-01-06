@@ -16,8 +16,8 @@
 
 #Nginx https server
 
+```
 server {
-
     listen       443 ssl;
     server_name  localhost;
     charset utf-8;
@@ -33,13 +33,11 @@ server {
        ssl_prefer_server_ciphers  on;
 
     location / {
-
            root   /data;
            index  index.html index.htm;
        }
 
     location /api/ {
-
             proxy_pass http://192.168.0.97:9001/;
             proxy_http_version 1.1;
             proxy_set_header Connection "";
@@ -59,7 +57,6 @@ server {
        }
 
     location /api_dev/ {
-
             proxy_pass http://192.168.0.95:9005/;
             proxy_http_version 1.1;
             proxy_set_header Connection "";
@@ -78,7 +75,7 @@ server {
             reset_timedout_connection on;
        }
    }
-
+```
 
 
 	* 负载均衡配置
