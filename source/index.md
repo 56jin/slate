@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Documentation
 
 language_tabs:
   - java
@@ -15,6 +15,7 @@ includes:
   - trade
   - errors
   - angularjs_style_guide
+  - markdown_syntax
 
 search: false
 ---
