@@ -10,10 +10,8 @@
 
 1. nginx的配置 （吴杭军请你补充这个模块的内容）
 	* https配置：
-1.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
-
-2.新建 /etc/nging/conf.d/ssl.conf 文件:
-
+	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
+	ii.新建 /etc/nging/conf.d/ssl.conf 文件:
 #Nginx https server
 
 ```
