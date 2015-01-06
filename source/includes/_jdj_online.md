@@ -8,7 +8,6 @@
 
 ## 上线操作步骤
 
-<<<<<<< HEAD
 ### nginx的配置 （吴杭军请你补充这个模块的内容）
 
   * https配置
@@ -17,15 +16,6 @@
 
 ``` 
 #ssl.conf
-=======
-1. nginx的配置 （吴杭军请你补充这个模块的内容）
-	* https配置：
-	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
-	ii.新建 /etc/nging/conf.d/ssl.conf 文件:
-#Nginx https server
-
-```
->>>>>>> 6baff696ea01de2b3859f2cbd0848960de96d99f
 server {
 listen       443 ssl;
 server_name  localhost;
