@@ -1,4 +1,4 @@
-# Markdown 语法说明
+# Markdown 语法说明 
 
 **NOTE:** This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to [Markdown: Syntax][eng-doc].
 
@@ -15,8 +15,6 @@
   [Github]: https://github.com/riku/Markdown-Syntax-CN
   [GitCafe]: http://gitcafe.com/riku/Markdown-Syntax-CN/
 
-Markdown 语法说明 (简体中文版) 
-================
 
 *   [概述](#overview)
     *   [宗旨](#philosophy)
