@@ -7,6 +7,7 @@ language_tabs:
   - javascript
 
 includes:
+  - markdown_syntax
   - jdj_online
   - common
   - core
@@ -15,7 +16,7 @@ includes:
   - trade
   - errors
   - angularjs_style_guide
-  - markdown_syntax
+  
 
 search: false
 ---
