@@ -16,7 +16,7 @@ includes:
   - errors
   - angularjs_style_guide
 
-search: true
+search: false
 ---
 
 # 使用介绍
