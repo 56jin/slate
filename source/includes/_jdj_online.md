@@ -10,8 +10,12 @@
 
 1. nginx的配置 （By hangjun.wu@sunlinghts.cc）
 	* https配置：
+
 	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录
+
 	ii.新建 /etc/nging/conf.d/ssl.conf 文件:
+
+
 
 server {
       listen 443 ssl;
@@ -73,18 +77,30 @@ server {
    }
 
 	* 负载均衡配置
+
 	* H5静态资源配置
+
 	
 2. postgresql放在pgDB-XXX上（By hangjun.wu@sunlinghts.cc）
+
 	* Master-Slave配置
+
 	 i.新建用户rep_user，并赋予replication权限：CREATE USER rep_user REPLICATION LOGIN CONNECTION LIMIT 4;
+
 	 ii.修改 postgresql.conf 文件：
+
             wal_level = hot_standby
+
             archive_mode = on
+
             archive_command = 'cp %p  /db/pg_archive/%f  < /dev/null'  //本地路径归档
+
 	 iii.编辑 pg_hba.conf 文件：
+
 	    host   replication   rep_user 10.251.236.185/32   trust    //slave的IP地址
+
 	 iv.在slave服务器上执行初始化数据：
+
 	    pg_basebackup -D /var/lib/pgsql/9.3/data -Fp -Xs -v -P -h 172.16.1.74 -p 5432 -U rep_user 
 //使用 pg_basebackup 从主库生成备库
 
