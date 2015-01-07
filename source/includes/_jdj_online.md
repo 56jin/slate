@@ -8,9 +8,9 @@
 
 ## 上线操作步骤
 
-1. nginx的配置 （吴杭军请你补充这个模块的内容）
+1. nginx的配置 （By hangjun.wu@sunlinghts.cc）
 	* https配置：
-	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录。
+	i.创建文件夹 /etc/nginx/cert ,上传自签名证书和key到该目录
 	ii.新建 /etc/nging/conf.d/ssl.conf 文件:
 
 server {
