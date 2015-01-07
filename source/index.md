@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Documentation
 
 language_tabs:
   - java
@@ -7,6 +7,7 @@ language_tabs:
   - javascript
 
 includes:
+  - markdown_syntax
   - jdj_online
   - common
   - core
@@ -15,8 +16,9 @@ includes:
   - trade
   - errors
   - angularjs_style_guide
+  
 
-search: true
+search: false
 ---
 
 # 使用介绍
