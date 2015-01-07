@@ -76,8 +76,20 @@ server {
 	* 负载均衡配置
 	* H5静态资源配置
 	
-2. postgresql放在pgDB-XXX上（吴杭军请你补充这个模块的内容）
-	* 进行Master-Slave配置
+2. postgresql放在pgDB-XXX上（By hangjun.wu@sunlinghts.cc）
+	* Master-Slave配置
+	 i.新建用户rep_user，并赋予replication权限：CREATE USER rep_user REPLICATION LOGIN CONNECTION LIMIT 4;
+	 ii.修改 postgresql.conf 文件：
+            wal_level = hot_standby
+            archive_mode = on
+            archive_command = 'cp %p  /db/pg_archive/%f  < /dev/null'  #本地路径归档
+	 iii.编辑 pg_hba.conf 文件：
+	    host   replication   rep_user 10.251.236.185/32   trust    #slave的IP地址
+	 iv.在slave服务器上执行初始化数据：
+	    pg_basebackup -D /var/lib/pgsql/9.3/data -Fp -Xs -v -P -h 172.16.1.74 -p 5432 -U rep_user 
+#使用 pg_basebackup 从主库生成备库
+
+
 	* 初始化数据导入
 	
 3. OP部署在ngix-http服务器上  (jekins的截图请『老汤同学弄一下， 图片的宽度请保存为1024px 』)
