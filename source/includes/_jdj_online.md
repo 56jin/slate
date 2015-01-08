@@ -108,69 +108,73 @@ server {
 	
 ### OP部署在ngix-http服务器上  (jekins的截图请『老汤同学弄一下， 图片的宽度请保存为1024px 』)
 
-    ### 配置OP上的conf/prod.conf
+### 配置OP上的conf/prod.conf
     ![配置OP上的conf/prod.conf](./op_prod_conf1.png)
     ![配置OP上的conf/prod.conf](./op_prod_conf2.png)
 
-    ### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
+### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
 
-	### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
-        *：jekins上项目名称为op-prd
-        *：jekins资源管理上的配置
-        ![jekins资源管理上的配置](./op-prd-resourceMng.png)
-        *：jekins构建的配置
-        ![jekins构建的配置](./op-prd-build.png)
-        *：jekins上构建后的操作配置
-        ![jekins上构建后的操作配置](./op-prd-opafterbuild.png)
-        *：配置完以上的步骤后，点击项目op-prd上的立即构建，看Console上的日志输出
+### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
+  * jekins上项目名称为op-prd
+  * jekins资源管理上的配置
+  ![jekins资源管理上的配置](./op-prd-resourceMng.png)
+  * jekins构建的配置
+  ![jekins构建的配置](./op-prd-build.png)
+  * jekins上构建后的操作配置
+  ![jekins上构建后的操作配置](./op-prd-opafterbuild.png)
+  * 配置完以上的步骤后，点击项目op-prd上的立即构建，看Console上的日志输出
 
-	### OP访问http://121.40.204.123:9006
+### OP访问http://121.40.204.123:9006
 
-	### 配置金豆荚系统数据
-    *：产品管理配置：需要配置的是产品信息、基金信息
+### 配置金豆荚系统数据
+  * 产品管理配置：需要配置的是产品信息、基金信息
 
-    *：活动管理配置：需要配置的是活动场景、奖励类型、分享信息、活动列表、兑换场景、活动错误信息维护
-
+  * 活动管理配置：需要配置的是活动场景、奖励类型、分享信息、活动列表、兑换场景、活动错误信息维护
 
 ### ThirdPartService部署到ngix-http服务器上（把jekins上的这个任务的截图放到images目录下）
-  ### 配置ThirdPartService上的conf/prod.conf
-        ![配置ThirdPartService上的conf/prod.conf](./3party_prod_conf.png)
 
-  ### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
+### 配置ThirdPartService上的conf/prod.conf
+  
+  ![配置ThirdPartService上的conf/prod.conf](./3party_prod_conf.png)
 
-  ### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
-        *：jekins上项目名称为3party-prd
-        *：jekins资源管理上的配置
-        ![jekins资源管理上的配置](./3party-prd-resourceMng.png)
-        *：jekins构建的配置
-        ![jekins构建的配置](./3party-prd-build.png)
-        *：jekins上构建后的操作配置
-        ![jekins上构建后的操作配置](./3party-prd-opafterbuild.png)
-        *：配置完以上的步骤后，点击项目3party-prd上的立即构建，看Console上的日志输出
-  ### ThirdPartService的功能介绍
-        *:发送短信
-        *：推送消息
-        *：获取短URL
+### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
+
+### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
+  * jekins上项目名称为3party-prd
+  * jekins资源管理上的配置
+  ![jekins资源管理上的配置](./3party-prd-resourceMng.png)
+  * jekins构建的配置
+  ![jekins构建的配置](./3party-prd-build.png)
+  * jekins上构建后的操作配置
+  ![jekins上构建后的操作配置](./3party-prd-opafterbuild.png)
+  * 配置完以上的步骤后，点击项目3party-prd上的立即构建，看Console上的日志输出
+
+### ThirdPartService的功能介绍
+  * 发送短信
+  * 推送消息
+  * 获取短URL
 
 	
 ### FP部署在finplat-1服务器上
-  ### 配置FP上的conf/prod.conf
-      ![配置FP上的conf/prod.conf](./fp_prod_conf.png)
+
+### 配置FP上的conf/prod.conf
+  ![配置FP上的conf/prod.conf](./fp_prod_conf.png)
 
 
-  ### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
+### 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
 
-  ### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
-  	*：jekins上项目名称为fp-prd
-  	*：jekins资源管理上的配置
-  	![jekins资源管理上的配置](./fp-prd-resourceMng.png)
-  	*：jekins构建的配置
-  	![jekins构建的配置](./fp-prd-build.png)
-  	*：jekins上构建后的操作配置
-  	![jekins上构建后的操作配置](./fp-prd-opafterbuild.png)
-  	*：配置完以上的步骤后，点击项目fp-prd上的立即构建，看Console上的日志输出
-  ### 通过jekins任务一键部署（把jekins上的这个任务的截图放到images目录下）
-  ### FP访问URL
+### 通过jekins任务一键部署 （把jekins上的这个任务的截图放到images目录下）
+	* jekins上项目名称为fp-prd
+	* jekins资源管理上的配置
+	![jekins资源管理上的配置](./fp-prd-resourceMng.png)
+	* jekins构建的配置
+	![jekins构建的配置](./fp-prd-build.png)
+	* jekins上构建后的操作配置
+	![jekins上构建后的操作配置](./fp-prd-opafterbuild.png)
+	* 配置完以上的步骤后，点击项目fp-prd上的立即构建，看Console上的日志输出
+### 通过jekins任务一键部署（把jekins上的这个任务的截图放到images目录下）
+
+### FP访问URL
     
 
 
