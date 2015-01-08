@@ -134,8 +134,7 @@ server {
 
 ### ThirdPartService部署到ngix-http服务器上（把jekins上的这个任务的截图放到images目录下）
   * 配置ThirdPartService上的conf/prod.conf
-        ![配置ThirdPartService上的conf/prod.conf](./fp_prod_conf1.png)
-        ![配置ThirdPartService上的conf/prod.conf](./fp_prod_conf2.png)
+        ![配置ThirdPartService上的conf/prod.conf](./3party_prod_conf.png)
 
   * 将master上最新代码merge到test上，test上稳定运行并测试通过，将test上的稳定代码merge到release上
 
@@ -149,6 +148,10 @@ server {
         ![jekins上构建后的操作配置](./3party-prd-opafterbuild.png)
         5：配置完以上的步骤后，点击项目3party-prd上的立即构建，看Console上的日志输出
   * ThirdPartService的功能介绍
+        1:发送短信
+        2：推送消息
+        3：获取短URL
+
 	
 ### FP部署在finplat-1服务器上
   * 配置FP上的conf/prod.conf
