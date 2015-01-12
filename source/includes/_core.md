@@ -1,6 +1,6 @@
 # Core 模块
 
-## Product Index
+## 产品首页
 
 ### URL
 
@@ -43,7 +43,7 @@
 ]}
 ```
     
-## Product List
+## 产品列表
 
 ### URL
 
@@ -121,7 +121,9 @@ CFP         |   集合理财(Collection Financial Product)
 }}
 ```
 
-## Product Detail
+## 产品详细
+
+获取产品详细
 
 ### URL
 
@@ -184,7 +186,9 @@ FP.PRODUCT.TYPE.4	|	银行资管
 }}
 ```
 
-## Product Chart
+## 产品图表
+
+获取产品列表
 
 ### URL
 
@@ -225,7 +229,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
 }}
 ```
 
-## Attention List
+## 关注列表
+
+获取关注列表
 
 ### URL 
 
@@ -280,7 +286,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
 2402	   |   产品详情查询失败
 2403	   |   种类不能为空
 
-## Attention Product 
+## 产品关注
+
+创建产品关注
 
 ### URL
 
@@ -302,7 +310,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## Attention Products
+## 批量产品关注
+
+批量创建产品关注
 
 ### URL
 
@@ -324,7 +334,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## Cancel Attention
+## 取消关注
+
+取消关注
 
 ### URL
 
@@ -346,7 +358,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }, "value": null}
 ```
 
-## Agreement
+## 协议
+
+获取协议
 
 ### URL
 
@@ -373,7 +387,9 @@ chartType   | 1(万份收益走势); 2(七日年化)
     }}
 ```
 
-## Deposit Interest Rate
+## 银行活期
+
+获取银行活期
 
 ### URL
 
