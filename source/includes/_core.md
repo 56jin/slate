@@ -43,6 +43,50 @@
 ]}
 ```
     
+## 产品首页v2.0
+
+### URL
+
+`POST   /core/v2.0/product/index`
+
+获取放在首页的产品
+
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": "0000",
+    "summary": "操作成功",
+    "detail": "",
+    "fields": {}
+}, "value": [
+    {
+        "id": null,
+        "name": "融通月月A",
+        "type": "FP.PRODUCT.TYPE.1",
+        "typeDesc": "基金",
+        "code": "000437",
+        "category": "STF",
+        "categoryDesc": "短期理财",
+        "group": "FP.RECOMMEND.TYPE.1",
+        "groupDesc": "首页",
+        "tag": "FP.RECOMMEND.FLAG.1",
+        "tagDesc": "荐",
+        "peopleOfPurchased": 265,
+        "sevenDaysIncome": "0.0103",
+        "millionIncome": "1.0160",
+        "purchasedMethod": "7天",
+        "purchasedAmount": "100",
+        "discount": "100.00000折",
+        "discountValue": "1.00000",
+        "activity": "--",
+        "purchaseState": 0
+    }
+]}
+```
+    
 ## 产品列表
 
 ### URL
