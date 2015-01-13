@@ -821,6 +821,7 @@ type:
 `Form格式：index=3&pageSize=5`
 
 request带token 查询登录后的  未带查询登录前的
+request header(name = "DeviceNo", value = 设备号)
 
 
 sendType:
@@ -921,6 +922,7 @@ Y      |	已读
 `Form格式：msgId=216623&sendType=FP.SEND.TYPE.3`
 
 request带token
+request header(name = "DeviceNo", value = 设备号)
 
 > The above command returns JSON structured like this:
 
@@ -939,6 +941,35 @@ request带token
                "content": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1个工作日内将现金打到您的银行卡里，请耐性等待。若逾期未到账请及时联系【金豆荚】的官方客服400-728-0153。【金豆荚】祝您理财愉快！",
                "createTime": "2014-12-23 08:40"
            }
+       }
+    }
+```
+
+
+
+## Search Message unreadnum
+
+### URL
+`POST /customer/message/unreadnum`
+
+### Parameters
+
+request带token
+request header(name = "DeviceNo", value = 设备号)
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+       {
+           "message": {
+               "severity": 0,
+               "code": "0000",
+               "summary": "操作成功",
+               "detail": "",
+               "fields": { }
+           },
+           "value": 5
        }
     }
 ```
