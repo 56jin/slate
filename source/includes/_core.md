@@ -18,29 +18,28 @@
     "summary": "操作成功",
     "detail": "",
     "fields": {}
-}, "value": [
-    {
-        "id": null,
-        "name": "海富货A",
-        "type": "FP.PRODUCT.TYPE.1",
-        "typeDesc": "基金",
-        "code": "519505",
-        "category": "MONETARY",
-        "categoryDesc": null,
-        "group": "FP.RECOMMEND.TYPE.1",
-        "groupDesc": "首页",
-        "tag": "FP.RECOMMEND.FLAG.1",
-        "tagDesc": "荐",
-        "peopleOfPurchased": 36894,
-        "sevenDaysIncome": "0.0393",
-        "millionIncome": "1.0387",
-        "purchasedMethod": "随买随卖",
-        "purchasedAmount": "100",
-        "discount": "免手续费",
-        "activity": "",
-        "purchaseState": 1
-    }
-]}
+}, "value": {
+    "id": null,
+    "name": "农银货币A",
+    "type": "FP.PRODUCT.TYPE.1",
+    "typeDesc": "基金",
+    "code": "660007",
+    "category": "MONETARY",
+    "categoryDesc": "货币型",
+    "group": "FP.RECOMMEND.TYPE.1",
+    "groupDesc": "首页",
+    "tag": "FP.RECOMMEND.FLAG.1",
+    "tagDesc": "荐",
+    "peopleOfPurchased": 272,
+    "sevenDaysIncome": "0.0479",
+    "millionIncome": "1.3039",
+    "purchasedMethod": "随买随卖",
+    "purchasedAmount": "100",
+    "discount": "免手续费",
+    "discountValue": "--",
+    "activity": "--",
+    "purchaseState": 1
+}}
 ```
     
 ## 产品首页v2.0

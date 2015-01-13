@@ -4,27 +4,25 @@
     "summary": "操作成功",
     "detail": "",
     "fields": {}
-}, "value": [
-    {
-        "id": null,
-        "name": "融通月月A",
-        "type": "FP.PRODUCT.TYPE.1",
-        "typeDesc": "基金",
-        "code": "000437",
-        "category": "STF",
-        "categoryDesc": "短期理财",
-        "group": "FP.RECOMMEND.TYPE.1",
-        "groupDesc": "首页",
-        "tag": "FP.RECOMMEND.FLAG.1",
-        "tagDesc": "荐",
-        "peopleOfPurchased": 265,
-        "sevenDaysIncome": "0.0103",
-        "millionIncome": "1.0160",
-        "purchasedMethod": "7天",
-        "purchasedAmount": "100",
-        "discount": "100.00000折",
-        "discountValue": "1.00000",
-        "activity": "--",
-        "purchaseState": 0
-    }
-]}
+}, "value": {
+    "id": null,
+    "name": "农银货币A",
+    "type": "FP.PRODUCT.TYPE.1",
+    "typeDesc": "基金",
+    "code": "660007",
+    "category": "MONETARY",
+    "categoryDesc": "货币型",
+    "group": "FP.RECOMMEND.TYPE.1",
+    "groupDesc": "首页",
+    "tag": "FP.RECOMMEND.FLAG.1",
+    "tagDesc": "荐",
+    "peopleOfPurchased": 272,
+    "sevenDaysIncome": "0.0479",
+    "millionIncome": "1.3039",
+    "purchasedMethod": "随买随卖",
+    "purchasedAmount": "100",
+    "discount": "免手续费",
+    "discountValue": "--",
+    "activity": "--",
+    "purchaseState": 1
+}}
