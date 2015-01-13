@@ -148,24 +148,53 @@ ASC001    |	签到场景
     "fields": {}
 }, "value": {
     "totalReward": 162,
-	"totalCash": 16.10,
-	"redPacket": 161.00,
-	" gots ": +162,
-	" payed ": -162,
-	"ruleUrl":"http://192.168.1.97/activity/signin.html"
-    " records ": [
+    "totalCash": 16.10,
+    "redPacket": 161.00,
+    "ruleUrl":"http://192.168.1.97/activity/signin.html"
+
+}}
+```
+
+## reward flow record
+
+### URL
+
+`POST   /account/reward/records`
+
+### Parameters
+`request需要带token(放在Cookie里)`
+`Form格式： index=0&pageSize=10`
+
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": "0228",
+    "summary": "查询成功",
+    "detail": "",
+    "fields": {}
+}, "value": {
+	"index": 0,
+    "pageSize": 10,
+    "count": 2,
+    " list ": [
         {
             "createTime":"2014-11-18 08:57:28",
 			"title":"分享到微信朋友圈",
 			"amount":"+100"
+			"状态":"成功"
         }
 		{
             "createTime":"2014-11-18 08:57:28",
 			"title":"兑换工银货币",
 			"amount":"-100"
+			"状态":"成功"
         }
     ]
 }}
+
 ```
 
 ## register obtain reward
@@ -318,6 +347,15 @@ type:
 
 ### Parameters
 `request需要带token(放在Cookie里)`
+`Form格式： index=0&pageSize=10`
+
+exchangeType:
+
+值        |       描述
+--------- | -----------
+0         |	兑换红包
+1	      |	兑换话费
+2         |	兑换Q币
 
 
 > The above command returns JSON structured like this:
@@ -338,12 +376,14 @@ type:
             "id": 2,
             "title": "首次购买送红包",
       		"detail": "首次购买送红包20元",
+      		"exchangeType": "0",
             "logo": " http://192.168.1.97/activity/images/loggon_icon.png"
         }
 		{
             "id": 3,
             "title": "购买理财产品送+4%收益",
       		"detail": "购买理财产品送+4%收益",
+      		"exchangeType": "0",
             "logo": " http://192.168.1.97/activity/images/loggon_icon.png"
         }
     ]
@@ -402,7 +442,7 @@ type:
 
 ### Parameters
 `request需要带token(放在Cookie里)`
-`Form格式： id=123`
+`Form格式： id=123&bankName="招商银行"&bankCode="CMB"&bankCard="2323232222"&phone="12321111111"&amount=20.03`
 
 > The above command returns JSON structured like this:
 
@@ -428,6 +468,34 @@ type:
 }, "value": {
 
 }}
+```
+
+
+##get activity rule content
+
+### URL
+
+`POST   /account/activity/rule`
+
+
+### Parameters
+
+`Form格式： activityId=123`
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": " 0227",
+    "summary": "查询成功",
+    "detail": "",
+    "fields": {}
+}, "value": {
+    "imageUrl": "http://192.168.1.97:9443/assets/help/songjifen.png",
+    "content": "测试content"
+}}
+
 ```
 
 

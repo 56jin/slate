@@ -52,7 +52,31 @@ You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
 
 Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
 
+### for centos
 
+ 1.安装[rvm](https://www.rvm.io/)
+ 
+    ```
+        gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+        
+        \curl -sSL https://get.rvm.io | bash -s stable
+    ```
+ 
+ 2.安装ruby
+    
+    ```
+        rvm get stable       (更新)
+        rvm list known      （查看）
+        rvm install 1.9.3   （安装）
+    ```
+ 3. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
+ 4. `cd slate`
+ 5. Install all dependencies: `bundle install`
+ 6. Start the test server: `bundle exec middleman server`
+
+You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
+
+Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
 
 ### for windows
 
