@@ -2,6 +2,8 @@
 
 ## 产品首页
 
+![首页接口v1.0](./product_index_v1.0.png)
+
 ### URL
 
 `POST   /core/product/index`
@@ -44,7 +46,7 @@
     
 ## 产品首页v2.0
 
-![首页接口v2.0](./product_index.png)
+![首页接口v2.0](./product_index_v2.0.png)
 
 ### URL
 
