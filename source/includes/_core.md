@@ -2,6 +2,8 @@
 
 ## 产品首页
 
+![首页接口v1.0](./product_index_v1.0.png)
+
 ### URL
 
 `POST   /core/product/index`
@@ -19,30 +21,32 @@
     "detail": "",
     "fields": {}
 }, "value": {
-    "id": null,
-    "name": "农银货币A",
-    "type": "FP.PRODUCT.TYPE.1",
-    "typeDesc": "基金",
-    "code": "660007",
-    "category": "MONETARY",
-    "categoryDesc": "货币型",
-    "group": "FP.RECOMMEND.TYPE.1",
-    "groupDesc": "首页",
-    "tag": "FP.RECOMMEND.FLAG.1",
-    "tagDesc": "荐",
-    "peopleOfPurchased": 272,
-    "sevenDaysIncome": "0.0479",
-    "millionIncome": "1.3039",
-    "purchasedMethod": "随买随卖",
-    "purchasedAmount": "100",
-    "discount": "免手续费",
-    "discountValue": "--",
-    "activity": "--",
-    "purchaseState": 1
+    "id": null,                          
+    "name": "农银货币A",                        产品名称            
+    "type": "FP.PRODUCT.TYPE.1",              产品类型
+    "typeDesc": "基金",                        产品类型描述
+    "code": "660007",                         产品代码
+    "category": "MONETARY",                   产品种类
+    "categoryDesc": "货币型",                  产品种类描述
+    "group": "FP.RECOMMEND.TYPE.1",           组
+    "groupDesc": "首页",                       组描述
+    "tag": "FP.RECOMMEND.FLAG.1",             标志
+    "tagDesc": "荐",                          标志描述
+    "peopleOfPurchased": 272,                 购买人数
+    "sevenDaysIncome": "0.0479",              七日年化
+    "millionIncome": "1.3039",                万份收益
+    "purchasedMethod": "随买随卖",              投资期限
+    "purchasedAmount": "100",                 起购金额
+    "discount": "免手续费",                     手续费描述
+    "discountValue": "--",                    手续费
+    "activity": "--",                         活动名称
+    "purchaseState": 1                        是否可申购	1: 可申购 0:不可申购
 }}
 ```
     
 ## 产品首页v2.0
+
+![首页接口v2.0](./product_index_v2.0.png)
 
 ### URL
 
@@ -62,31 +66,33 @@
     "fields": {}
 }, "value": [
     {
-        "id": null,
-        "name": "融通月月A",
-        "type": "FP.PRODUCT.TYPE.1",
-        "typeDesc": "基金",
-        "code": "000437",
-        "category": "STF",
-        "categoryDesc": "短期理财",
-        "group": "FP.RECOMMEND.TYPE.1",
-        "groupDesc": "首页",
-        "tag": "FP.RECOMMEND.FLAG.1",
-        "tagDesc": "荐",
-        "peopleOfPurchased": 265,
-        "sevenDaysIncome": "0.0103",
-        "millionIncome": "1.0160",
-        "purchasedMethod": "7天",
-        "purchasedAmount": "100",
-        "discount": "100.00000折",
-        "discountValue": "1.00000",
-        "activity": "--",
-        "purchaseState": 0
+        "id": null,                          
+            "name": "农银货币A",                        产品名称            
+            "type": "FP.PRODUCT.TYPE.1",              产品类型
+            "typeDesc": "基金",                        产品类型描述
+            "code": "660007",                         产品代码
+            "category": "MONETARY",                   产品种类
+            "categoryDesc": "货币型",                  产品种类描述
+            "group": "FP.RECOMMEND.TYPE.1",           组
+            "groupDesc": "首页",                       组描述
+            "tag": "FP.RECOMMEND.FLAG.1",             标志
+            "tagDesc": "荐",                          标志描述
+            "peopleOfPurchased": 272,                 购买人数
+            "sevenDaysIncome": "0.0479",              七日年化
+            "millionIncome": "1.3039",                万份收益
+            "purchasedMethod": "随买随卖",              买卖方式
+            "purchasedAmount": "100",                 起购金额
+            "discount": "免手续费",                     手续费描述
+            "discountValue": "--",                    手续费
+            "activity": "--",                         活动名称
+            "purchaseState": 1                        是否可申购	1: 可申购 0:不可申购
     }
 ]}
 ```
     
 ## 产品列表
+
+![产品列表](./products.png)
 
 ### URL
 
@@ -96,7 +102,7 @@
     
 ### Parameters
 
-`Form格式： index=0&pageSize=10&category= STF&type=FP.PRODUCT.TYPE.1`
+`Form格式： index=0&pageSize=10&category=STF&type=FP.PRODUCT.TYPE.1`
 
 type:
 
@@ -138,33 +144,37 @@ CFP         |   集合理财(Collection Financial Product)
     "index": 0,
     "pageSize": 10,
     "pageNum": 0,
-    "count": 1,
+    "count": 30,
     "list": [
         {
             "id": null,
-            "name": "大成21债A",
-            "type": "FP.PRODUCT.TYPE.1",
-            "typeDesc": "基金",
-            "code": "090023",
-            "category": "2",
-            "categoryDesc": null,
-            "group": "FP.RECOMMEND.TYPE.1",
-            "groupDesc": "推荐",
-            "tag": "FP.RECOMMEND.FLAG.2",
-            "tagDesc": "抢",
-            "peopleOfPurchased": 111,
-            "sevenDaysIncome": "0.0354",
-            "millionIncome": "0.9732",
-            "purchasedMethod": "7天",
-            "purchasedAmount": "1000",
-            "discount": "免手续费",
-            "activity": ""
+            "name": "建信双月债A",                        产品名称
+            "type": "FP.PRODUCT.TYPE.1",                产品类型
+            "typeDesc": "基金",                          产品类型描述
+            "code": "530029",                           产品代码
+            "category": "STF",                          产品种类
+            "categoryDesc": "短期理财",                   产品种类描述
+            "group": "FP.RECOMMEND.TYPE.2",             组
+            "groupDesc": "其他",                         组描述
+            "tag": "FP.RECOMMEND.FLAG.2",               标志
+            "tagDesc": "抢",                             标志描述
+            "peopleOfPurchased": 208,                   购买人数
+            "sevenDaysIncome": "0.0837",                七日年化
+            "millionIncome": "1.0789",                  万份收益
+            "purchasedMethod": "7天",                    投资期限
+            "purchasedAmount": "100",                   起购金额
+            "discount": "免手续费",                       手续费描述
+            "discountValue": "--",                      手续费
+            "activity": "--",                           活动名称
+            "purchaseState": 1                          是否可申购	1: 可申购 0:不可申购
         }
     ]
 }}
 ```
 
 ## 产品详细
+
+![产品详细](./product_detail.png)
 
 获取产品详细
 
@@ -174,7 +184,7 @@ CFP         |   集合理财(Collection Financial Product)
 
 ### Parameters
 
-`Form格式：type=FP.PRODUCT.TYPE.1&code=000009`
+`Form格式：type=FP.PRODUCT.TYPE.1&code=530029`
 
 type:
 
@@ -197,39 +207,41 @@ FP.PRODUCT.TYPE.4	|	银行资管
     "fields": {}
 }, "value": {
     "id": null,
-    "name": "工银货币",                      
-    "type": "FP.PRODUCT.TYPE.1",                  
-    "typeDesc": "基金",                     
-    "code": "482002",                      
-    "category": "MONETARY",
-    "categoryDesc": "货币型",
-    "group": "FP.RECOMMEND.TYPE.2",
-    "groupDesc": "其他",
-    "tag": "FP.RECOMMEND.FLAG.3",
-    "tagDesc": "热",
-    "peopleOfPurchased": 36557,
-    "sevenDaysIncome": "0.0404",
-    "millionIncome": "1.0460",
-    "purchasedMethod": "随买随卖",
-    "purchasedAmount": "100",
-    "discount": "免手续费",
-    "discountValue": "1.0000",
-    "activity": null,
-    "purchaseState": 1,
-    "toAccountType": "快速赎回",
-    "riskLevel": "低风险",
-    "companyName": null,
-    "fundScale": "1143.28亿",
-    "buiersOf30Days": 5699,
-    "currentDate": "2014-12-11",
-    "establishmentDate": null,
-    "latestHoldShares": null,
-    "manager": null,
-    "trusteeName": null
+    "name": "建信双月债A",                        产品名称
+    "type": "FP.PRODUCT.TYPE.1",                产品类型
+    "typeDesc": "基金",                          产品类型描述
+    "code": "530029",                           产品代码
+    "category": "STF",                          产品种类
+    "categoryDesc": "短期理财",                   产品种类描述
+    "group": "FP.RECOMMEND.TYPE.2",             组
+    "groupDesc": "其他",                         组描述
+    "tag": "FP.RECOMMEND.FLAG.2",               标志
+    "tagDesc": "抢",                             标志描述
+    "peopleOfPurchased": 208,                   购买人数
+    "sevenDaysIncome": "0.0837",                七日年化
+    "millionIncome": "1.0789",                  万份收益
+    "purchasedMethod": "7天",                    投资期限
+    "purchasedAmount": "100",                   起购金额
+    "discount": "免手续费",                       手续费描述
+    "discountValue": "--",                      手续费
+    "activity": "--",                           活动名称
+    "purchaseState": 1                          是否可申购	1: 可申购 0:不可申购
+    "toAccountType": "普通赎回",                  取现到帐
+    "riskLevel": "中风险",                        风险
+    "companyName": "建信",                        基金公司名字
+    "fundScale": "12.85亿",                      基金规模
+    "buiersOf30Days": 204,                      30天购买人数
+    "currentDate": "2015-01-12",                净值日期
+    "establishmentDate": "2013-01-29",          成立日期
+    "latestHoldShares": "795692386",            最新持有数
+    "manager": "高珊",                            基金经理
+    "trusteeName": "招商银行股份有限公司"           基金托管人
 }}
 ```
 
 ## 产品图表
+
+![产品详细](./product_detail.png)
 
 获取产品列表
 
@@ -239,7 +251,7 @@ FP.PRODUCT.TYPE.4	|	银行资管
 
 ### Parameters
 
-`chartType=1& prdCode=GYHB& interval=7`
+`chartType=1&prdCode=GYHB&interval=7`
 
 值          |       描述 
 ---------   | ----------- 
@@ -255,14 +267,14 @@ chartType   | 1(万份收益走势); 2(七日年化)
     "detail": "",
     "fields": {}
 }, "value": {
-    "prdName": "易方达天天B",
-    "prdCode": "000010",
-    "chartType": "1",
-    "chartName": "万份收益走势",
+    "prdName": "易方达天天B",                产品名称
+    "prdCode": "000010",                   产品代码
+    "chartType": "1",                      图表类型
+    "chartName": "万份收益走势",             图标名称
     "points": [
         {
-            "date": "2014-11-20",
-            "value": "1.41440"
+            "date": "2014-11-20",          净值日期
+            "value": "1.41440"             万分收益/七日年化
         },
         {
             "date": "2014-11-20",
@@ -301,22 +313,25 @@ chartType   | 1(万份收益走势); 2(七日年化)
         "list": [
             {
                 "id": null,
-                "name": "海富货A",
-                "type": "FP.PRODUCT.TYPE.1",
-                "typeDesc": "基金",
-                "code": "519505",
-                "category": "7",
-                "categoryDesc": null,
-                "group": "FP.RECOMMEND.TYPE.1",
-                "groupDesc": "推荐",
-                "tag": "FP.RECOMMEND.FLAG.2",
-                "tagDesc": "抢",
-                "peopleOfPurchased": 36894,
-                "sevenDaysIncome": "0.0476",
-                "millionIncome": "1.0695",
-                "purchasedMethod": "随买随卖",
-                "purchasedAmount": "100.0000",
-                "discount": "免手续费"
+                "name": "建信双月债A",                        产品名称
+                "type": "FP.PRODUCT.TYPE.1",                产品类型
+                "typeDesc": "基金",                          产品类型描述
+                "code": "530029",                           产品代码
+                "category": "STF",                          产品种类
+                "categoryDesc": "短期理财",                   产品种类描述
+                "group": "FP.RECOMMEND.TYPE.2",             组
+                "groupDesc": "其他",                         组描述
+                "tag": "FP.RECOMMEND.FLAG.2",               标志
+                "tagDesc": "抢",                             标志描述
+                "peopleOfPurchased": 208,                   购买人数
+                "sevenDaysIncome": "0.0837",                七日年化
+                "millionIncome": "1.0789",                  万份收益
+                "purchasedMethod": "7天",                    投资期限
+                "purchasedAmount": "100",                   起购金额
+                "discount": "免手续费",                       手续费描述
+                "discountValue": "--",                      手续费
+                "activity": "--",                           活动名称
+                "purchaseState": 1                          是否可申购	1: 可申购 0:不可申购
             }
         ]
     }}
@@ -423,14 +438,16 @@ chartType   | 1(万份收益走势); 2(七日年化)
         "detail": "",
         "fields": {}
     }, "value": {
-        "title": "用户协议",
-        "link": "http://192.168.1.97:8888/www/userinstructions.html",
-        "updatedAt": "2014-09-27 12:04:58",
-        "code": "0001"
+        "title": "用户协议",                                                协议名称
+        "link": "http://192.168.1.97:8888/www/userinstructions.html",      协议链接
+        "updatedAt": "2014-09-27 12:04:58",                                更新时间
+        "code": "0001"                                                     协议编号
     }}
 ```
 
 ## 银行活期
+
+![银行活期](./deposit_interest.png)
 
 获取银行活期
 
@@ -447,7 +464,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
         "summary": "操作成功",
         "detail": "",
         "fields": {}
-    }, "value": 0.0035}
+    }, "value": 0.0035}                                                   活期利率
 ```
 
 
