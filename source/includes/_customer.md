@@ -1041,3 +1041,56 @@ request header(name = "DeviceNo", value = 设备号)
        }
     }
 ```
+
+
+
+## Message enable push
+
+### URL
+`POST /customer/message/enablepush`
+
+### Parameters
+
+request header(name = "registrationId", value = 值)
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0218",
+            "summary": "推送开启成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": null
+    }
+```
+
+
+
+## Message disable push
+
+### URL
+`POST /customer/message/disablepush`
+
+### Parameters
+
+request header(name = "registrationId", value = 值)
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0219",
+            "summary": "推送关闭成功",
+            "detail": "",
+            "fields": { }
+        },
+        "value": null
+    }
+```
+
