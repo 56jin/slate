@@ -1,6 +1,6 @@
 # customer 模块
 
-## Activity List
+## 活动列表
 
 ### URL
 
@@ -33,17 +33,17 @@ filter:
     "count": 1,
     "list": [
         {
-            "id": 2,
-            "name": "送积分",
-      		"image": " http://192.168.1.97:9443/assets/help/songjifen.png",
-            "url": " http://192.168.1.97:9443/assets/help/login.html"
+            "id": 2,       活动主键
+            "name": "送积分",      活动名称
+      		"image": " http://192.168.1.97:9443/assets/help/songjifen.png",          活动图片url
+            "url": " http://192.168.1.97:9443/assets/help/login.html"                活动详情h5页面url
         }
     ]
 }}
 ```
 
 
-## Init Sign button
+## 初始化签到按钮
 
 ### URL
 
@@ -70,14 +70,14 @@ F	      |	关闭
     "detail": "",
     "fields": {}
 }, "value": {
-	"scene":"ASC001",
-    "status":"N",
-	"alreadyGet" :0,
-	"notGet" :50
+	"scene":"ASC001",   活动场景
+    "status":"N",       状态
+	"alreadyGet" :0,    已经获取奖励数量
+	"notGet" :50        还没有获取奖励的数量
 }}
 ```
 
-## Sign obtain reward
+## 签到获取奖励
 
 ### URL
 
@@ -119,14 +119,14 @@ ASC001    |	签到场景
     "detail": "",
     "fields": {}
 }, "value": {
-    "scene":"ASC001",
-    "status":"F",
-	"alreadyGet" :50,
-	"notGet" :0
+    "scene":"ASC001",       活动场景
+    "status":"F",           状态
+	"alreadyGet" :50,       已经获取奖励数量
+	"notGet" :0             还没有获取奖励的数量
 }}
 ```
 
-## My golden bean details
+## 奖励详情
 
 ### URL
 
@@ -147,15 +147,15 @@ ASC001    |	签到场景
     "detail": "",
     "fields": {}
 }, "value": {
-    "totalReward": 162,
-    "totalCash": 16.10,
-    "redPacket": 161.00,
-    "ruleUrl":"http://192.168.1.97/activity/signin.html"
+    "totalReward": 162,     总金豆
+    "totalCash": 16.10,     金豆对应的金额
+    "redPacket": 161.00,    红包数量
+    "ruleUrl":"http://192.168.1.97/activity/signin.html"    规则h5页面
 
 }}
 ```
 
-## reward flow record
+## 奖励流水记录
 
 ### URL
 
@@ -181,10 +181,10 @@ ASC001    |	签到场景
     "count": 2,
     " list ": [
         {
-            "createTime":"2014-11-18 08:57:28",
-			"title":"分享到微信朋友圈",
-			"amount":"+100"
-			"状态":"成功"
+            "createTime":"2014-11-18 08:57:28", 创建时间
+			"title":"分享到微信朋友圈",         参加活动名称
+			"amount":"+100"                     流水数量
+			"状态":"成功"                       状态
         }
 		{
             "createTime":"2014-11-18 08:57:28",
@@ -197,7 +197,7 @@ ASC001    |	签到场景
 
 ```
 
-## register obtain reward
+## 注册送金豆
 
 ### URL
 
@@ -233,7 +233,7 @@ F	      |	关闭
 ```
 
 
-## trade obtain reward
+## 首次购买送红包(后台触发)
 
 ### URL
 
@@ -301,7 +301,7 @@ ART00H	  |	送红包
 ```
 
 
-## share
+## 分享接口
 
 ### URL
 
@@ -339,7 +339,7 @@ type:
 }}
 ```
 
-## exchange scene list
+## 兑换场景列表
 
 ### URL
 
