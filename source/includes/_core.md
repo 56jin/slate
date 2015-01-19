@@ -294,7 +294,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ### Parameters
 
-`index=0&pageSize=10`
+`codes[0]=000009&codes[1]=000037`
 
 > The above command returns JSON structured like this:
 
@@ -307,31 +307,53 @@ chartType   | 1(万份收益走势); 2(七日年化)
         "fields": {}
     }, "value": {
         "index": 0,
-        "pageSize": 10,
+        "pageSize": 0,
         "pageNum": 0,
-        "count": 1,
+        "count": 0,
         "list": [
             {
                 "id": null,
-                "name": "建信双月债A",                        产品名称
-                "type": "FP.PRODUCT.TYPE.1",                产品类型
-                "typeDesc": "基金",                          产品类型描述
-                "code": "530029",                           产品代码
-                "category": "STF",                          产品种类
-                "categoryDesc": "短期理财",                   产品种类描述
-                "group": "FP.RECOMMEND.TYPE.2",             组
-                "groupDesc": "其他",                         组描述
-                "tag": "FP.RECOMMEND.FLAG.2",               标志
-                "tagDesc": "抢",                             标志描述
-                "peopleOfPurchased": 208,                   购买人数
-                "sevenDaysIncome": "0.0837",                七日年化
-                "millionIncome": "1.0789",                  万份收益
-                "purchasedMethod": "7天",                    投资期限
-                "purchasedAmount": "100",                   起购金额
-                "discount": "免手续费",                       手续费描述
-                "discountValue": "--",                      手续费
-                "activity": "--",                           活动名称
-                "purchaseState": 1                          是否可申购	1: 可申购 0:不可申购
+                "name": "易方达天天A",
+                "type": "FP.PRODUCT.TYPE.1",
+                "typeDesc": "基金",
+                "code": "000009",
+                "category": "MONETARY",
+                "categoryDesc": "货币型",
+                "group": "FP.RECOMMEND.TYPE.2",
+                "groupDesc": "其他",
+                "tag": "FP.RECOMMEND.FLAG.2",
+                "tagDesc": "抢",
+                "peopleOfPurchased": 246,
+                "sevenDaysIncome": "0.0501",
+                "millionIncome": "1.7035",
+                "purchasedMethod": "随买随卖",
+                "purchasedAmount": "100",
+                "discount": "免手续费",
+                "discountValue": "--",
+                "activity": "--",
+                "purchaseState": 1
+            },
+            {
+                "id": null,
+                "name": "广发7天债A",
+                "type": "FP.PRODUCT.TYPE.1",
+                "typeDesc": "基金",
+                "code": "000037",
+                "category": "STF",
+                "categoryDesc": "短期理财",
+                "group": "FP.RECOMMEND.TYPE.2",
+                "groupDesc": "其他",
+                "tag": "FP.RECOMMEND.FLAG.2",
+                "tagDesc": "抢",
+                "peopleOfPurchased": 281,
+                "sevenDaysIncome": "0.0492",
+                "millionIncome": "1.3471",
+                "purchasedMethod": "7天",
+                "purchasedAmount": "1000",
+                "discount": "免手续费",
+                "discountValue": "--",
+                "activity": "--",
+                "purchaseState": 1
             }
         ]
     }}
@@ -343,78 +365,7 @@ chartType   | 1(万份收益走势); 2(七日年化)
 2401	   |   类型不能为空
 2402	   |   产品详情查询失败
 2403	   |   种类不能为空
-
-## 产品关注
-
-创建产品关注
-
-### URL
-
-`POST /core/product/attention/create`
-
-### Parameters
-
-`code=519505`
-
-> The above command returns JSON structured like this:
-
-```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": null}
-```
-
-## 批量产品关注
-
-批量创建产品关注
-
-### URL
-
-`POST /core/product/attentions/create`
-
-### Parameters
-
-`Form格式:codes[2]=161608 codes[1]=202301,codes[0]=519505`
-
-> The above command returns JSON structured like this:
-
-```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": null}
-```
-
-## 取消关注
-
-取消关注
-
-### URL
-
-`POST /core/product/attention/cancel`
-
-### Parameters
-
-`code=519505`
-
-> The above command returns JSON structured like this:
-
-```json
-    {"message": {
-        "severity": 0,
-        "code": "0000",
-        "summary": "操作成功",
-        "detail": "",
-        "fields": {}
-    }, "value": null}
-```
+2404	   |   产品代码不能为空
 
 ## 协议
 
