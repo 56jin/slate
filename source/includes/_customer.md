@@ -646,8 +646,8 @@ exchangeType:
 
 ## 重置密码验证
 
-![未实名重置密码验证](./reset_pwd_cerity.png)
-![实名重置密码验证](./reset_pwd_cerity2.png)
+![未实名重置密码验证](./reset_pwd_certity.png)
+![实名重置密码验证](./reset_pwd_certity2.png)
 
 ### URL
 `POST /customer/resetpwdcertify`
