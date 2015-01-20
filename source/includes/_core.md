@@ -419,13 +419,17 @@ chartType   | 1(万份收益走势); 2(七日年化)
 ```
 
 
-## gen Verification Code
+## 获取验证码
+
+![登录](./register.png)
 
 ### URL
 `POST /core/verificationcode`
-(调用第二办公室短信发送接口，需通知对方绑定接口请求服务器IP地址)
+
 ### Parameters
 `Form格式：mobilePhoneNo=13811599308&type=REGISTER&deviceNo=123`
+
+PS：(调用第二办公室短信发送接口，需通知对方绑定接口请求服务器IP地址)
 
 type:
 
@@ -454,6 +458,8 @@ RESETACCOUNT	    |	重置交易密码
 
 ## register
 
+![登录](./register.png)
+
 ### URL
 `POST /core/register`
 
@@ -473,18 +479,18 @@ RESETACCOUNT	    |	重置交易密码
             "fields": { }
         },
         "value": {
-            "userName": null,
-            "nickName": null,
-            "mobilePhoneNo": "15821948586",
-            "mobileDisplayNo": "158****8586",
-            "email": null,
-            "gestureOpened": "0",//0关闭、1开启
-            "certify": "0",//0 未实名 1实名
-            "idCardNo": null,
-            "bankCardCount": "0",
-            "tradePwdFlag": "0",//0未1已
-            "gestureSetted": "0",//首次设置手势密码0是1否
-            "shumi_tokenKey": null,
+            "userName": null,                            //真实姓名
+            "nickName": null,                            //昵称
+            "mobilePhoneNo": "15821948586",              //手机号
+            "mobileDisplayNo": "158****8586",            //手机展示号
+            "email": null,                               //邮箱
+            "gestureOpened": "0",                        //手势密码状态： 0关闭、1开启
+            "certify": "0",                              //实名认证状态： 0 未实名 1实名
+            "idCardNo": null,                            //身份证号
+            "bankCardCount": "0",                        //已绑卡数量
+            "tradePwdFlag": "0",                         //是否设置了交易密码：0未1已
+            "gestureSetted": "0",                        //是否是首次设置手势密码0是1否
+            "shumi_tokenKey": null,                      //以下为数米返回信息
             "shumi_tokenSecret": null,
             "shumi_userName": null,
             "shumi_realName": null,
@@ -511,6 +517,8 @@ RESETACCOUNT	    |	重置交易密码
 
 
 ## certify
+
+![登录](./register.png)
 
 ### URL
 `POST /core/certify`

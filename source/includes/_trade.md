@@ -1,7 +1,7 @@
 # Trade 模块
 
 
-## shumi trade order
+## 申购回调（参数为数米SDK返回参数）
 
 ### URL
 `POST /trade/shumitradeorder`
@@ -33,7 +33,7 @@
     }
 ```
 
-## shumi trade redeem
+## 赎回回调（参数为数米SDK返回参数）
 
 ### URL
 `POST /trade/shumitraderedeem`

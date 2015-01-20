@@ -1,6 +1,6 @@
 # Account 模块
 
-## save shumi account
+## 数米用户回调（参数为数米SDK返回参数）
 
 ### URL
 `POST /account/saveshumiaccount`
