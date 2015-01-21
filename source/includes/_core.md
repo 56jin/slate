@@ -421,8 +421,6 @@ chartType   | 1(万份收益走势); 2(七日年化)
 
 ## 获取验证码
 
-![登录](./register.png)
-
 ### URL
 `POST /core/verificationcode`
 
@@ -517,8 +515,6 @@ RESETACCOUNT	    |	重置交易密码
 
 
 ## certify
-
-![登录](./register.png)
 
 ### URL
 `POST /core/certify`
