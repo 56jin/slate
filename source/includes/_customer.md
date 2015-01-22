@@ -1095,8 +1095,8 @@ request header(name = "DeviceNo", value = 设备号)
 
 ### Parameters
 
-request header(name = "DeviceNo", value = 值)
-request header(name = "registrationId", value = 值)
+request header(name = "DeviceNo", value = 设备号)
+request header(name = "registrationId", value = 调用JPush SDK返回的)
 
 > The above command returns JSON structured like this:
 
@@ -1122,8 +1122,8 @@ request header(name = "registrationId", value = 值)
 
 ### Parameters
 
-request header(name = "DeviceNo", value = 值)
-request header(name = "registrationId", value = 值)
+request header(name = "DeviceNo", value = 设备号)
+request header(name = "registrationId", value = 调用JPush SDK返回的)
 
 > The above command returns JSON structured like this:
 

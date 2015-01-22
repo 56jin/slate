@@ -62,3 +62,35 @@
         "value": null
     }
 ```
+
+
+
+## 快速赎回回调（参数为数米SDK返回参数）
+
+### URL
+`POST /trade/quickredeem`
+
+### Parameters
+`Form格式：applySerial;
+          fundCode;
+          fundName;
+          applySum;
+          bankCardInfo;
+          dateTime;`
+
+ 请求带token
+
+> The above command returns JSON structured like this:
+
+```json
+    {
+        "message": {
+            "severity": 0,
+            "code": "0401",
+            "summary": "赎回成功",
+            "detail": "",
+            "fileds": { }
+        },
+        "value": null
+    }
+```
