@@ -111,10 +111,10 @@ ASC001    |	签到场景
     "detail": "",
     "fields": {}
 }, "value": {
-    "scene":"ASC001",
-    "status":"F",
-	"alreadyGet" :50,
-	"notGet" :0
+    "scene":"ASC001",    活动场景
+    "status":"F",         状态 N表示开放  F表示关闭
+	"alreadyGet" :50,     已经获取奖励数量
+	"notGet" :0           还没有获取奖励的数量
 }}
 
 返回（签到失败--重复签到）
@@ -126,7 +126,7 @@ ASC001    |	签到场景
     "fields": {}
 }, "value": {
     "scene":"ASC001",       活动场景
-    "status":"F",           状态
+    "status":"F",           状态 N表示开放  F表示关闭
 	"alreadyGet" :50,       已经获取奖励数量
 	"notGet" :0             还没有获取奖励的数量
 }}
@@ -236,10 +236,10 @@ F	      |	关闭
     "detail": "",
     "fields": {}
 }, "value": {
-    "scene":"ASC004",
-    "status":"F",
-	"alreadyGet" :50,
-	"notGet" :0
+    "scene":"ASC004",  活动场景
+    "status":"F",       状态 N表示开放  F表示关闭
+	"alreadyGet" :50,   已经获取奖励数量
+	"notGet" :0             还没有获取奖励的数量
 }}
 
 ```
@@ -288,10 +288,10 @@ ART00H	  |	送红包
 	"supplySum":"200.00",
     " records ": [
         {
-			"title":"购买送红包",
-			"rewardType":"ART00H",
-			"detail":"20元红包",
-			"ruleUrl":" http://192.168.1.97:9443/assets/help/login.html"
+			"title":"购买送红包",     标题
+			"rewardType":"ART00H",      奖励类型
+			"detail":"20元红包",       描述信息
+			"ruleUrl":" http://192.168.1.97:9443/assets/help/login.html"    规则url
         }
 		{
 			"title":"购买送红包",
