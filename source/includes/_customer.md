@@ -521,15 +521,17 @@ exchangeType:
 ```
 
 
-## login
+## 登录
+
+![登录](./login.png)
 
 ### URL
 `POST /customer/login`
 
 ### Parameters
-`Form格式：mobilePhoneNo=13811599308&passWord=encrypt(MD5)&deviceNo=123`
+`Form格式：mobilePhoneNo=13811599308&passWord=123222&deviceNo=123`
 
- 请求带token
+ request需要带token(放在Cookie里)
 
 > The above command returns JSON structured like this:
 
@@ -580,7 +582,9 @@ exchangeType:
 
 
 
-## login by ges
+## 手势登录
+
+![手势登录](./login_by_ges.png)
 
 ### URL
 `POST /customer/loginbyges`
@@ -640,7 +644,10 @@ exchangeType:
 
 
 
-## reset pwd certify
+## 重置密码验证
+
+![未实名重置密码验证](./reset_pwd_certify.png)
+![实名重置密码验证](./reset_pwd_certify2.png)
 
 ### URL
 `POST /customer/resetpwdcertify`
@@ -677,7 +684,9 @@ exchangeType:
 
 
 
-## reset pwd
+## 重置密码
+
+![重置密码](./reset_pwd.png)
 
 ### URL
 `POST /customer/resetpwd`
@@ -726,7 +735,9 @@ exchangeType:
 
 
 
-## confirm pwd
+## 密码确认
+
+![密码确认](./confirm_pwd.png)
 
 ### URL
 `POST /customer/confirmpwd`
@@ -752,7 +763,9 @@ exchangeType:
 ```
 
 
-## save ges pwd
+## 保存关闭手势密码
+
+![密码确认](./save_gesture_pwd.png)
 
 ### URL
 `POST /customer/savegespwd`
@@ -802,7 +815,9 @@ exchangeType:
 
 
 
-## logout
+## 退出登录
+
+![退出登录](./logout.png)
 
 ### URL
 `POST /customer/logout`
@@ -830,7 +845,9 @@ exchangeType:
 
 
 
-## get usermstr
+## 用户查询
+
+![用户查询](./get_user_info.png)
 
 ### URL
 `POST /customer/getusermstr`
@@ -878,7 +895,7 @@ exchangeType:
 ```
 
 
-## add feedback
+## 反馈
 
 ### URL
 `POST /customer/addfeedback`
@@ -902,7 +919,9 @@ exchangeType:
 ```
 
 
-## Search Message List
+## 消息查询
+
+![消息查询](./message_list.png)
 
 ### URL
 `POST /customer/message/list`
@@ -912,7 +931,6 @@ exchangeType:
 
 request带token 查询登录后的  未带查询登录前的
 request header(name = "DeviceNo", value = 设备号)
-
 
 sendType:
 
@@ -948,13 +966,13 @@ Y      |	已读
                "count": 7,
                "list": [
                    {
-                       "msgId": 216627,
-                       "messageRuleId": 6,
-                       "title": "红包取现",
-                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",
-                       "createTime": "2014-12-23 08:40",
-                       "sendType": "FP.SEND.TYPE.3",
-                       "readInd": "N"
+                       "msgId": 216627,                                                     消息ID
+                       "messageRuleId": 6,                                                  消息规则ID
+                       "title": "红包取现",                                                  标题
+                       "summary": "尊敬的用户，您申请取现红包0.01元成功，我们工作人员将在1...",   概要
+                       "createTime": "2014-12-23 08:40",                                    创建时间
+                       "sendType": "FP.SEND.TYPE.3",                                        推送类型
+                       "readInd": "N"                                                       阅读标志 Y已阅读 N未
                    },
                    {
                        "msgId": 216626,
@@ -1003,7 +1021,9 @@ Y      |	已读
 
 
 
-## Search Message detail
+## 查看消息明细
+
+![查看消息明细](./message_detail.png)
 
 ### URL
 `POST /customer/message/detail`
@@ -1037,7 +1057,9 @@ request header(name = "DeviceNo", value = 设备号)
 
 
 
-## Search Message unreadnum
+## 未读记录数量查询
+
+![未读记录数量查询](./count_un_read_num.png)
 
 ### URL
 `POST /customer/message/unreadnum`
@@ -1066,14 +1088,15 @@ request header(name = "DeviceNo", value = 设备号)
 
 
 
-## Message enable push
+## 推送开启
 
 ### URL
 `POST /customer/message/enablepush`
 
 ### Parameters
 
-request header(name = "registrationId", value = 值)
+request header(name = "DeviceNo", value = 设备号)
+request header(name = "registrationId", value = 调用JPush SDK返回的)
 
 > The above command returns JSON structured like this:
 
@@ -1092,14 +1115,15 @@ request header(name = "registrationId", value = 值)
 
 
 
-## Message disable push
+## 推送关闭
 
 ### URL
 `POST /customer/message/disablepush`
 
 ### Parameters
 
-request header(name = "registrationId", value = 值)
+request header(name = "DeviceNo", value = 设备号)
+request header(name = "registrationId", value = 调用JPush SDK返回的)
 
 > The above command returns JSON structured like this:
 
@@ -1115,4 +1139,8 @@ request header(name = "registrationId", value = 值)
         "value": null
     }
 ```
+
+
+
+
 
