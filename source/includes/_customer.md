@@ -464,6 +464,41 @@ exchangeType:
 }}
 ```
 
+
+##金豆兑换话费前准备数据
+
+### URL
+
+`POST   /account/activity/beforebeanexchange`
+
+
+### Parameters
+`request需要带token(放在Cookie里)`
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": "0226",
+    "summary": "兑换前预准备成功",
+    "detail": "",
+    "fields": {}
+}, "value": {
+    "rate": "0.01",
+    "exchangeList": [
+        "10",
+        "20",
+        "50",
+        "100",
+        "200",
+        "500"
+    ]
+}}
+```
+
+
+
 ##exchange reward
 
 ### 兑换动作实现
@@ -490,6 +525,36 @@ exchangeType:
     "payed": 100.00,
     "accountDate": "2014-12-16 12:00:00"
 }}
+
+失败返回
+{"message": {
+    "severity": 0,
+    "code": " 2228",
+    "summary": "兑换数量不足",
+    "detail": "抱歉，兑换数量不足",
+    "fields": {}
+}, "value": {
+
+}}
+```
+
+
+
+### Parameters（金豆兑换）
+`request需要带token(放在Cookie里)`
+`Form格式： id=123&phone="12321111111"&amount=20.03`
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": " 0227",
+    "summary": "兑换成功",
+    "detail": "",
+    "fields": {}
+}, "value": null
+}
 
 失败返回
 {"message": {
