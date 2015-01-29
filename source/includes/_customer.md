@@ -480,8 +480,8 @@ exchangeType:
 ```json
 {"message": {
     "severity": 0,
-    "code": "0226",
-    "summary": "兑换前预准备成功",
+    "code": "0229",
+    "summary": "金豆兑换前预准备成功",
     "detail": "",
     "fields": {}
 }, "value": {
