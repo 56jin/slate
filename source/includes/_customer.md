@@ -597,6 +597,58 @@ exchangeType:
 ```
 
 
+
+##获取该活动剩余发放数量
+
+### URL
+
+`GET   /account/activity/remain/:id `
+
+
+### Parameters
+
+`id为活动id`
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": " 0227",
+    "summary": "查询成功",
+    "detail": "",
+    "fields": {}
+}, "value": 40
+}
+
+```
+
+
+##判断该活动是否已结束
+
+### URL
+
+`GET  /activity/isover/:id  `
+
+
+### Parameters
+
+`id为活动id,返回true已结束，false未结束`
+
+> The above command returns JSON structured like this:
+
+```json
+{"message": {
+    "severity": 0,
+    "code": " 0227",
+    "summary": "查询成功",
+    "detail": "",
+    "fields": {}
+}, "value": true
+}
+
+```
+
 ## 登录
 
 ![登录](./login.png)
