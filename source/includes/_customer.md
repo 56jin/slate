@@ -614,8 +614,8 @@ exchangeType:
 ```json
 {"message": {
     "severity": 0,
-    "code": " 0227",
-    "summary": "查询成功",
+    "code": " 0000",
+    "summary": "操作成功",
     "detail": "",
     "fields": {}
 }, "value": 40
@@ -640,8 +640,8 @@ exchangeType:
 ```json
 {"message": {
     "severity": 0,
-    "code": " 0227",
-    "summary": "查询成功",
+    "code": " 0000",
+    "summary": "操作成功",
     "detail": "",
     "fields": {}
 }, "value": true
