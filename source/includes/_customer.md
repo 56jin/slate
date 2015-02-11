@@ -379,7 +379,7 @@ type:
 
 ### 给“财富”中的我的金豆的兑换tab提供查询接口
 
-![兑换场景列表](./exchangescenes.png)
+![兑换场景列表](./activity/exchangescenes.png)
 
 ### URL
 
@@ -435,7 +435,7 @@ exchangeType:
 
 ### 在“财富”中的我的金豆中的兑换前准备数据接口
 
-![红包取现](./redpackage.png)
+![红包取现](./activity/redpackage.png)
 
 ### URL
 
@@ -480,7 +480,7 @@ exchangeType:
 
 ##金豆兑换话费前准备数据
 
-![红包取现](./bean.png)
+![红包取现](./activity/bean.png)
 
 ### URL
 
@@ -518,7 +518,7 @@ exchangeType:
 
 ### 兑换动作实现
 
-![兑换](./exchange.png)
+![兑换](./activity/exchange.png)
 
 ### URL
 
