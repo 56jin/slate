@@ -206,21 +206,21 @@ ASC001    |	签到场景
 			"amount":"+100"                     流水数量
             "createTime":"2014-11-18 08:57:28", 创建时间
 			"status":"成功"                       状态
-			"rewardType":"0"                   //0 红包 1 金豆
+			"rewardType":"1"                   //0 金豆 1 红包
         },
         {
             "title": "金豆兑换10元话费",
             "amount": "-1000",
             "createTime": "2015-02-03 11:12:02",
             "status": "兑换中",
-            "rewardType": "1"
+            "rewardType": "0"
         },
 		{
 			"title":"兑换工银货币",
 			"amount":"-100"
             "createTime":"2014-11-18 08:57:28",
 			"status":"成功"
-			"rewardType":"0"
+			"rewardType":"1"
         }
     ]
 }}
@@ -379,6 +379,8 @@ type:
 
 ### 给“财富”中的我的金豆的兑换tab提供查询接口
 
+![兑换场景列表](./exchangescenes.png)
+
 ### URL
 
 `POST   /account/activity/exchangescenes`
@@ -433,6 +435,8 @@ exchangeType:
 
 ### 在“财富”中的我的金豆中的兑换前准备数据接口
 
+![红包取现](./redpackage.png)
+
 ### URL
 
 `POST   /account/activity/beforeexchange`
@@ -476,6 +480,8 @@ exchangeType:
 
 ##金豆兑换话费前准备数据
 
+![红包取现](./bean.png)
+
 ### URL
 
 `POST   /account/activity/beforebeanexchange`
@@ -511,6 +517,8 @@ exchangeType:
 ##exchange reward
 
 ### 兑换动作实现
+
+![兑换](./exchange.png)
 
 ### URL
 
