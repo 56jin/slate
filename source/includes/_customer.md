@@ -1245,7 +1245,8 @@ request header(name = "DeviceNo", value = 设备号)
 request header(name = "registrationId", value = 调用JPush SDK返回的)
 
 request header(name = "User-Agent", value = "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D167\jindoujialicai\1.3-M1")
-1、用于区别ios和android平台； 2、1.3-M1为当前版本号，告知后台当前版本号
+ios版本信息参考如上
+1、用于区别ios和android平台,iPhone为ios,否则为android； 2、1.3-M1为当前版本号，告知后台当前版本号,截取字符串jindoujialicai\1.3-M1后的1.3-M1为当前版本
 
 > The above command returns JSON structured like this:
 
